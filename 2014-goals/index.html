@@ -4,6 +4,7 @@
   <title>NWSL Data Visualizations</title>
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="parent-container">
@@ -14,19 +15,28 @@
       
     </svg>
     <script type="text/javascript">
-    var width = 600,
-        barHeight = 30;
+    var width = 700,
+        barHeight = 23;
 
-    var playerNames = [];
-    var totalGoals = [];
+    var goalScorers = [];
 
     var x = d3.scale.linear()
-        .range([0, width]);
+        .range([0, width - 80]);
 
     var chart = d3.select("#total-goals-chart")
         .attr("width", width)
 
-    d3.json('raw.json', function(data) {
+    function getRidOfZeroes (data) {
+      JSON.stringify(data);
+      data.forEach(function(item, index) {
+        if (item.G > 0) {
+          goalScorers.push(item);
+        }
+      })
+      return goalScorers;
+    }
+
+    function buildChart (data, callback) {
       x.domain([0, d3.max(data, function(d) { return d.G; })]);
 
       chart.attr("height", barHeight * data.length);
@@ -45,10 +55,10 @@
         .attr("y", barHeight / 2)
         .attr("dy", ".35em")
         .text(function(d) { return d.NAME +'  ('+ d.G +')'; });
-      // json.forEach(function(item) {
-      //   playerNames.push(item.NAME);
-      //   totalGoals.push(item.G);
-      // });
+    }
+
+    d3.json('raw.json', function(data) {
+      buildChart(goalScorers, getRidOfZeroes(data));
     });
 
     </script>
