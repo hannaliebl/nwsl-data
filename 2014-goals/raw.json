@@ -15,7 +15,8 @@
       "FC":11,
       "FS":11,
       "YC":2,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Bianca D'Agostino",
@@ -33,7 +34,8 @@
       "FC":12,
       "FS":1,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Lisa De Vanna",
@@ -51,7 +53,8 @@
       "FC":3,
       "FS":6,
       "YC":0,
-      "RC":1
+      "RC":1,
+      "team": "Boston"
    },
    {
       "NAME":"Kim DeCesare",
@@ -69,7 +72,8 @@
       "FC":0,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Maddy Evans",
@@ -87,7 +91,8 @@
       "FC":9,
       "FS":2,
       "YC":1,
-      "RC":1
+      "RC":1,
+      "team": "Boston"
    },
    {
       "NAME":"Nkem Ezurike",
@@ -105,7 +110,8 @@
       "FC":6,
       "FS":9,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Ashley Grove",
@@ -123,7 +129,8 @@
       "FC":2,
       "FS":1,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Courtney Jones",
@@ -141,7 +148,8 @@
       "FC":16,
       "FS":4,
       "YC":5,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Julie King",
@@ -159,7 +167,8 @@
       "FC":8,
       "FS":7,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Kaylyn Kyle",
@@ -177,7 +186,8 @@
       "FC":2,
       "FS":1,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Joanna Lohman",
@@ -195,7 +205,8 @@
       "FC":16,
       "FS":8,
       "YC":2,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Kristie Mewis",
@@ -213,7 +224,8 @@
       "FC":4,
       "FS":7,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Heather O'Reilly",
@@ -231,7 +243,8 @@
       "FC":12,
       "FS":4,
       "YC":3,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Mollie Pathman",
@@ -249,7 +262,8 @@
       "FC":7,
       "FS":5,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Jazmine Reeves",
@@ -267,7 +281,8 @@
       "FC":11,
       "FS":9,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Lianne Sanderson",
@@ -285,7 +300,8 @@
       "FC":10,
       "FS":12,
       "YC":1,
-      "RC":1
+      "RC":1,
+      "team": "Boston"
    },
    {
       "NAME":"Katie Schoepfer",
@@ -303,7 +319,8 @@
       "FC":5,
       "FS":3,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Bianca Sierra",
@@ -321,7 +338,8 @@
       "FC":9,
       "FS":0,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Chelsea Stewart",
@@ -339,7 +357,8 @@
       "FC":2,
       "FS":1,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Nikki Washington",
@@ -357,7 +376,8 @@
       "FC":7,
       "FS":5,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Cat Whitehill",
@@ -375,7 +395,8 @@
       "FC":9,
       "FS":4,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Rachel Wood",
@@ -393,7 +414,8 @@
       "FC":0,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Boston"
    },
    {
       "NAME":"Shannon Boxx",
@@ -411,7 +433,8 @@
       "FC":4,
       "FS":0,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Hayley Brock",
@@ -429,7 +452,8 @@
       "FC":4,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Zakiya Bywaters",
@@ -447,7 +471,8 @@
       "FC":6,
       "FS":7,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Lori Chalupny",
@@ -465,7 +490,8 @@
       "FC":26,
       "FS":36,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Vanessa DiBernardo",
@@ -483,7 +509,8 @@
       "FC":11,
       "FS":15,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Abby Erceg",
@@ -501,7 +528,8 @@
       "FC":6,
       "FS":2,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Taryn Hemmings",
@@ -519,7 +547,8 @@
       "FC":2,
       "FS":4,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Jen Hoy",
@@ -537,7 +566,8 @@
       "FC":14,
       "FS":7,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Samantha Johnson",
@@ -555,7 +585,8 @@
       "FC":4,
       "FS":11,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Julie Johnston",
@@ -573,7 +604,8 @@
       "FC":12,
       "FS":16,
       "YC":3,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Adriana Leon",
@@ -591,7 +623,8 @@
       "FC":23,
       "FS":9,
       "YC":2,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Alyssa Mautz",
@@ -609,7 +642,8 @@
       "FC":13,
       "FS":6,
       "YC":4,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Kecia Morway",
@@ -627,7 +661,8 @@
       "FC":8,
       "FS":2,
       "YC":2,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Christen Press",
@@ -645,7 +680,8 @@
       "FC":7,
       "FS":3,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Rachel Quon",
@@ -663,7 +699,8 @@
       "FC":9,
       "FS":5,
       "YC":2,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Niki Read",
@@ -681,7 +718,8 @@
       "FC":0,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Jackie Santacaterina",
@@ -699,7 +737,8 @@
       "FC":6,
       "FS":4,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Julianne Sitch",
@@ -717,7 +756,8 @@
       "FC":17,
       "FS":2,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Melissa Tancredi",
@@ -735,7 +775,8 @@
       "FC":7,
       "FS":3,
       "YC":1,
-      "RC":1
+      "RC":1,
+      "team": "Chicago"
    },
    {
       "NAME":"Emily Van Egmond",
@@ -753,7 +794,8 @@
       "FC":10,
       "FS":4,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Michele Weissenhofer",
@@ -771,7 +813,8 @@
       "FC":2,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Michelle Wenino",
@@ -789,7 +832,8 @@
       "FC":8,
       "FS":12,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Chicago"
    },
    {
       "NAME":"Liz Bogus",
@@ -807,7 +851,8 @@
       "FC":2,
       "FS":3,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Jen Buczkowski",
@@ -825,7 +870,8 @@
       "FC":17,
       "FS":13,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Molly Dreska",
@@ -843,7 +889,8 @@
       "FC":0,
       "FS":1,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Missy Geha",
@@ -861,7 +908,8 @@
       "FC":0,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Katrina Gorry",
@@ -879,7 +927,8 @@
       "FC":2,
       "FS":1,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Sarah Hagen",
@@ -897,7 +946,8 @@
       "FC":1,
       "FS":4,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Melissa Henderson",
@@ -915,7 +965,8 @@
       "FC":0,
       "FS":1,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Lauren Holiday",
@@ -933,7 +984,8 @@
       "FC":12,
       "FS":31,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Kassey Kallman",
@@ -951,7 +1003,8 @@
       "FC":7,
       "FS":9,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Mandy Laddish",
@@ -969,7 +1022,8 @@
       "FC":0,
       "FS":0,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Amy LePeilbet",
@@ -987,7 +1041,8 @@
       "FC":3,
       "FS":1,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Morgan Marlborough",
@@ -1005,7 +1060,8 @@
       "FC":1,
       "FS":1,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Merritt Mathias",
@@ -1023,7 +1079,8 @@
       "FC":17,
       "FS":14,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Nikki Phillips",
@@ -1041,7 +1098,8 @@
       "FC":11,
       "FS":2,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Jenna Richmond",
@@ -1059,7 +1117,8 @@
       "FC":15,
       "FS":12,
       "YC":2,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Leigh Ann Robinson",
@@ -1077,7 +1136,8 @@
       "FC":5,
       "FS":2,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Amy Rodriguez",
@@ -1095,7 +1155,8 @@
       "FC":14,
       "FS":15,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Becky Sauerbrunn",
@@ -1113,7 +1174,8 @@
       "FC":3,
       "FS":3,
       "YC":1,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Frances Silva",
@@ -1131,7 +1193,8 @@
       "FC":4,
       "FS":13,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Erika Tymrak",
@@ -1149,7 +1212,8 @@
       "FC":6,
       "FS":27,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Nia Williams",
@@ -1167,7 +1231,8 @@
       "FC":4,
       "FS":3,
       "YC":0,
-      "RC":0
+      "RC":0,
+      "team": "Kansas City"
    },
    {
       "NAME":"Jackie Acevedo",
