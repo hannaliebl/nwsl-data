@@ -1,0 +1,263 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.graphalchemist.com/alchemy.min.css">
+    <script type="text/javascript" src="http://cdn.graphalchemist.com/alchemy.min.js">
+    </script>
+    <style>
+    .player circle {
+            fill: orange;
+            stroke: white;
+        }
+    .uswnt circle {
+            fill: red;
+            stroke: red;
+        }
+    .NWSL circle {
+            fill: #1E2C55;
+            stroke: red;
+        }
+    .wps circle {
+            fill: #BD9B6B;
+            stroke: #9A0130;
+        }
+    .fff circle {
+      fill: #41003C;
+      stroke: #D5217A;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>This is Alchemy</h1>
+    <div id="alchemy" class="alchemy"></div>
+      <script>
+      var some_data = {
+        "nodes": [
+          {
+            "id": "kling",
+            "node_type": "player",
+            "caption": "Meghan Klingenberg"
+          },
+          {
+            "id": "mewis",
+            "node_type": "player",
+            "caption": "Kristie Mewis"
+          },
+          {
+            "id": "hao",
+            "node_type": "player",
+            "caption": "Heather O’Reilly"
+          },
+          {
+            "id": "breakers-nwsl",
+            "node_type": "NWSL",
+            "caption": "Boston Breakers (NWSL)"
+          },
+          {
+            "id": "ptfc-nwsl",
+            "node_type": "NWSL",
+            "caption": "Portland Thorns (NWSL)"
+          },
+          {
+            "id": "psg",
+            "node_type": "fff",
+            "caption": "Paris Saint-Germain"
+          },
+          {
+            "id": "spirit",
+            "node_type": "NWSL",
+            "caption": "Washington Spirit"
+          },
+          {
+            "id": "tobin",
+            "node_type": "player",
+            "caption": "Tobin Heath"
+          },
+          {
+            "id": "kriegs",
+            "node_type": "player",
+            "caption": "Ali Krieger"
+          },
+          {
+            "id": "sincy",
+            "node_type": "player",
+            "caption": "Christine Sinclair"
+          },
+          {
+            "id": "pinoe",
+            "node_type": "player",
+            "caption": "Megan Rapinoe"
+          },
+          {
+            "id": "reign",
+            "node_type": "NWSL",
+            "caption": "Seattle Reign"
+          },
+          {
+            "id": "mj",
+            "node_type": "WPS",
+            "caption": "MagicJack"
+          },
+          {
+            "id": "wny-nwsl",
+            "node_type": "NWSL",
+            "caption": "Western NY Flash"
+          },
+          {
+            "id": "abby",
+            "node_type": "player",
+            "caption": "Abby Wambach"
+          },
+          {
+            "id": "hope",
+            "node_type": "player",
+            "caption": "Hope Solo"
+          },
+          {
+            "id": "huffy",
+            "node_type": "player",
+            "caption": "Sarah Huffman"
+          },
+          {
+            "id": "uswnt",
+            "node_type": "national-team",
+            "caption": "USWNT",
+            "root": true
+          },
+          {
+            "id": "canwnt",
+            "node_type": "canwnt",
+            "caption": "CANWNT",
+            "root": true
+          }
+        ],
+        "edges": [
+          {
+            "source": "uswnt",
+            "target": "kling",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "mewis",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "hao",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "tobin",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "kriegs",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "pinoe",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "abby",
+            "root": true
+          },
+          {
+            "source": "uswnt",
+            "target": "huffy",
+            "root": true
+          },
+          {
+            "source": "breakers-nwsl",
+            "target": "kling",
+          },
+          {
+            "source": "breakers-nwsl",
+            "target": "mewis",
+          },
+          {
+            "source": "breakers-nwsl",
+            "target": "hao",
+          },
+          {
+            "source": "ptfc-nwsl",
+            "target": "tobin",
+          },
+          {
+            "source": "ptfc-nwsl",
+            "target": "sincy",
+          },
+          {
+            "source": "ptfc-nwsl",
+            "target": "huffy",
+          },
+          {
+            "source": "psg",
+            "target": "tobin",
+          },
+          {
+            "source": "spirit",
+            "target": "kriegs",
+          },
+          {
+            "source": "mj",
+            "target": "pinoe",
+          },
+          {
+            "source": "mj",
+            "target": "abby",
+          },
+          {
+            "source": "mj",
+            "target": "huffy",
+          },
+          {
+            "source": "mj",
+            "target": "hope",
+          },
+          {
+            "source": "wny-nwsl",
+            "target": "abby",
+        },
+          {
+            "source": "wny-nwsl",
+            "target": "huffy",
+          },
+          {
+            "source": "canwnt",
+            "target": "sincy"
+          },
+          {
+            "source": "ptfc-nwsl",
+            "target": "sincy"
+          },
+          {
+            "source": "reign",
+            "target": "hope"
+          }
+        ]
+      };
+      var config = {
+        dataSource: some_data,
+          graphHeight: function () { return 600; },
+          graphWidth: function () { return 600; },
+          linkDistance: function () { return 40; },
+          nodeTypes: {"node_type": ["WPS",
+                           "player",
+                           "NWSL",
+                           "uswnt",
+                           "fff",
+                           "canwnt"]},
+          caption: function (node) { 
+            console.log(node.caption);
+            return node.caption;
+          }
+      };
+      alchemy.begin(config);
+    </script>
+  </body>
+</html>
