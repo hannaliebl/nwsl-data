@@ -3,7 +3,7 @@ body {
 }
 
 #total-goals-chart rect {
-  fill: lightblue;
+  stroke-width: 3px;
 }
 
 #total-goals-chart text {

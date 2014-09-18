@@ -16,14 +16,49 @@
     </svg>
     <script type="text/javascript">
     var margin = {top: 20, right: 30, bottom: 120, left: 40},
-        width = 1200 - margin.left - margin.right,
+        width = 1300 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
 
     var goalScorers = [];
 
-    var color = d3.scale.ordinal()
-      .domain(["foo", "bar", "baz"])
-      .range(["green", "red", "blue"]);
+    var teamColors = {
+      boston: {
+          stroke: "#004890",
+          fill: "#fff"
+        },
+      chicago: {
+          stroke: "#1BB6EC",
+          fill: "#E61938"
+        },
+      kansascity: {
+          stroke: "#090909",
+          fill: "#08679F"
+        },
+      portland: {
+          stroke:"#113B2D",
+          fill: "#AF2326"
+        },
+      seattle: {
+          stroke: "#949DA4",
+          fill: "#132732"
+        },
+      jersey: {
+          stroke: "#FA7018",
+          fill: "#013E7D"
+        },
+      dc: {
+          stroke: "#0D1F2C",
+          fill: "#C32033"
+        },
+      wny: {
+          stroke: "#D60B29",
+          fill: "#FBEE01"
+        },
+      houston: {
+          stroke: "#92BCE4",
+          fill: "#F5853D"
+        }
+    }
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
@@ -82,7 +117,13 @@
       .attr("x", function(d) { return x(d.NAME); })
       .attr("y", function(d) { return y(d.G); })
       .attr("height", function(d) { return height - y(d.G); })
-      .attr("width", x.rangeBand());
+      .attr("width", x.rangeBand())
+      .attr("fill", function(d) {
+        return teamColors[d.team].fill;
+      })
+      .attr("stroke", function(d) {
+        return teamColors[d.team].stroke;
+      });
     }
 
     d3.json('raw.json', function(data) {
