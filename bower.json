@@ -1,0 +1,25 @@
+{
+  "name": "nwsl-data",
+  "version": "0.0.0",
+  "authors": [
+    "hannaliebl <hanna@hannaliebl.com>"
+  ],
+  "description": "An app to display data related to the National Women's Soccer League",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/public/bower_components",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "angular-animate": "~1.2.23",
+    "angular-route": "~1.2.23",
+    "d3": "~3.4.11"
+  }
+}
