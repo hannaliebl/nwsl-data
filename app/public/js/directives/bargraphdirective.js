@@ -4,7 +4,8 @@ nwslData
   return {
     restrict: "AE",
     scope: {
-      team: "&"
+      team: "&",
+      hover: '&'
     },
     template: '<div id="goalscorers">Goalscorers</div>',
     link: function (scope, element, attrs) {
@@ -107,6 +108,9 @@ nwslData
         chart.selectAll(".bar")
           .data(data)
           .enter().append("rect")
+            .on('mouseover', function(d,i) {
+              return scope.hover({item: d});
+            })
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.NAME); })
             .attr("y", function(d) { return y(d.G); })
@@ -119,11 +123,6 @@ nwslData
               return teamColors[d.team].stroke;
             });
       }
-
-      // d3.json('raw.json', function() {
-      //   console.log("chart drawn initially");
-      //   buildChart(goalScorers, nwslDataService.getRidOfZeroes("2014"));
-      // });
     }
   };
 });
