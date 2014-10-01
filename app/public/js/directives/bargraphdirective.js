@@ -5,16 +5,17 @@ nwslData
     restrict: "AE",
     scope: {
       team: "&",
-      hover: '&'
+      hover: '&',
+      hoverLeave: '&'
     },
-    template: '<div id="goalscorers">Goalscorers</div>',
+    template: '<button>CLICK TO SORT</button><div id="goalscorers">Goalscorers</div>',
     link: function (scope, element, attrs) {
       nwslDataService.getRidOfZeroes("2014").then(function (data) {
         buildChart(data);
       });
 
       var margin = {top: 20, right: 30, bottom: 120, left: 40},
-          width = 1300 - margin.left - margin.right,
+          width = 1200 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
 
       var teamColors = {
@@ -110,6 +111,9 @@ nwslData
           .enter().append("rect")
             .on('mouseover', function(d,i) {
               return scope.hover({item: d});
+            })
+            .on('mouseleave', function(d,i) {
+              return scope.hoverLeave({item: d});
             })
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.NAME); })

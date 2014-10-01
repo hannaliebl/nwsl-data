@@ -2,5 +2,5 @@
 <button ng-click="sortByTotalGoals()">Sort by Total Goals Scored</button>
 <div class="graph-container">
   <p class="hover-label">{{details.NAME}}</p>
-  <bargraph hover="showDetail(item)"></bargraph>
+  <bargraph hover="showDetail(item)" hover-leave="hideDetail(item)"></bargraph>
 </div>
