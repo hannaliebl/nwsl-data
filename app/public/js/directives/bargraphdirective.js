@@ -6,12 +6,74 @@ nwslData
     scope: {
       team: "&",
       hover: '&',
-      hoverLeave: '&'
+      hoverLeave: '&',
+      sort: '&',
+      year: "@",
+      title: "@"
     },
-    template: '<button>CLICK TO SORT</button><div id="goalscorers">Goalscorers</div>',
+    template: '<button ng-click="sort()">CLICK TO SORT</button><div id="goalscorers"><h1>{{title}}</h1></div>',
     link: function (scope, element, attrs) {
-      nwslDataService.getRidOfZeroes("2014").then(function (data) {
+      nwslDataService.getRidOfZeroes(scope.year).then(function (data) {
         buildChart(data);
+
+        var sortOrder = true;
+        scope.sort = function() {
+          sortOrder = !sortOrder;
+          if (!sortOrder) {
+          var x0 = x.domain(data.sort(function(a, b) { return b.G - a.G; })
+            .map(function(d) { return d.NAME; }))
+            .copy();
+
+          var transition = chart.transition().duration(250),
+            delay = function(d, i) { return i * 10; };
+
+          transition.selectAll(".bar")
+            .delay(delay)
+            .attr("x", function(d) { return x0(d.NAME); });
+          transition.select(".x.axis")
+            .call(xAxis)
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-65)";
+            })
+            .selectAll("g")
+            .delay(delay);
+          } else {
+            var x0 = x.domain(data.sort(function(a,b) {
+              if (a.team === b.team) {
+                if (a.G > b.G) return -1;
+                if (a.G < b.G) return 1;
+                return 0;
+              }
+              if (a.team > b.team) return 1;
+              if (a.team < b.team) return -1;
+                return 0;
+            })
+            .map(function(d) { return d.NAME; }))
+            .copy();
+
+            var transition = chart.transition().duration(250),
+            delay = function(d, i) { return i * 10; };
+
+          transition.selectAll(".bar")
+            .delay(delay)
+            .attr("x", function(d) { return x0(d.NAME); });
+          transition.select(".x.axis")
+            .call(xAxis)
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-65)";
+            })
+            .selectAll("g")
+            .delay(delay);
+          }
+        };
       });
 
       var margin = {top: 20, right: 30, bottom: 120, left: 40},
