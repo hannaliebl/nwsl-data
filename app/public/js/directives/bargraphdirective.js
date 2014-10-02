@@ -9,17 +9,21 @@ nwslData
       hoverLeave: '&',
       sort: '&',
       year: "@",
-      title: "@"
+      title: "@",
+      sortText: "@"
     },
-    template: '<button ng-click="sort()">CLICK TO SORT</button><div id="goalscorers"><h1>{{title}}</h1></div>',
+    template: '<button ng-click="sort()">{{sortText}}</button><div id="goalscorers"><h1>{{title}}</h1></div>',
     link: function (scope, element, attrs) {
       nwslDataService.getRidOfZeroes(scope.year).then(function (data) {
         buildChart(data);
+
+        scope.sortText = "Sort by Total Goals";
 
         var sortOrder = true;
         scope.sort = function() {
           sortOrder = !sortOrder;
           if (!sortOrder) {
+          scope.sortText = "Sort by Teams";
           var x0 = x.domain(data.sort(function(a, b) { return b.G - a.G; })
             .map(function(d) { return d.NAME; }))
             .copy();
@@ -42,6 +46,7 @@ nwslData
             .selectAll("g")
             .delay(delay);
           } else {
+            scope.sortText = "Sort by Total Goals";
             var x0 = x.domain(data.sort(function(a,b) {
               if (a.team === b.team) {
                 if (a.G > b.G) return -1;
@@ -171,23 +176,23 @@ nwslData
         chart.selectAll(".bar")
           .data(data)
           .enter().append("rect")
-            .on('mouseover', function(d,i) {
-              return scope.hover({item: d});
-            })
-            .on('mouseleave', function(d,i) {
-              return scope.hoverLeave({item: d});
-            })
-            .attr("class", "bar")
-            .attr("x", function(d) { return x(d.NAME); })
-            .attr("y", function(d) { return y(d.G); })
-            .attr("height", function(d) { return height - y(d.G); })
-            .attr("width", x.rangeBand())
-            .attr("fill", function(d) {
-              return teamColors[d.team].fill;
-            })
-            .attr("stroke", function(d) {
-              return teamColors[d.team].stroke;
-            });
+          .on('mouseover', function(d,i) {
+            return scope.hover({item: d});
+          })
+          .on('mouseleave', function(d,i) {
+            return scope.hoverLeave({item: d});
+          })
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.NAME); })
+          .attr("y", function(d) { return y(d.G); })
+          .attr("height", function(d) { return height - y(d.G); })
+          .attr("width", x.rangeBand())
+          .attr("fill", function(d) {
+            return teamColors[d.team].fill;
+          })
+          .attr("stroke", function(d) {
+            return teamColors[d.team].stroke;
+        });
       }
     }
   };
