@@ -24,7 +24,16 @@ nwslData
           sortOrder = !sortOrder;
           if (!sortOrder) {
           scope.sortText = "Sort by Teams";
-          var x0 = x.domain(data.sort(function(a, b) { return b.G - a.G; })
+          var x0 = x.domain(data.sort(function(a, b) { 
+            if (a.G === b.G) {
+            if (a.team > b.team) return 1;
+            if (a.team < b.team) return -1;
+            return 0;
+          }
+          if (a.G > b.G) return -1;
+          if (a.G < b.G) return 1;
+            return 0; 
+          })
             .map(function(d) { return d.NAME; }))
             .copy();
 
