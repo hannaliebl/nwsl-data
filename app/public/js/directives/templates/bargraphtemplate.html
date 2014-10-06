@@ -1,3 +1,11 @@
 <button ng-click="sort()">{{sortText}}</button>
-<button ng-click="team('boston')">Boston</button>
+<button ng-click="team('boston'); clicked=!clicked" ng-class="{'toggle-on': clicked, 'toggle-off': !clicked}">Boston</button>
+<button ng-click="team('chicago'); clicked=!clicked" ng-class="{'toggle-on': clicked, 'toggle-off': !clicked}">Chicago</button>
+<button ng-click="team('dc')">Washington DC</button>
+<button ng-click="team('houston')">Houston</button>
+<button ng-click="team('jersey')">New Jersey</button>
+<button ng-click="team('kansascity')">Kansas City</button>
+<button ng-click="team('portland')">Portland</button>
+<button ng-click="team('seattle')">Seattle</button>
+<button ng-click="team('wny')">Rochester</button>
 <div id="goalscorers"><h1>{{title}}</h1></div>
