@@ -1,6 +1,9 @@
 nwslData
 .controller('GraphsCtrl', function($scope, nwslDataService) {
   'use strict';
+  nwslDataService.getTeams(2014).then(function(data) {
+    $scope.cities = data;
+  });
   $scope.showDetail = function (item) {
     $scope.$apply(function () {
       if (!$scope.showDetail)

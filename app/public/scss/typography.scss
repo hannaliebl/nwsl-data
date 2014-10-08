@@ -25,13 +25,13 @@ button {
   font-size: 1rem;
   padding: 10px;
   &:hover {
-    background: blue;
+    color: blue;
     transition: all 400ms;
   }
   &.toggle-on {
-    background: green;
+    color: green;
   }
   &.toggle-off {
-    background: white;
+    color: white;
   }
 }

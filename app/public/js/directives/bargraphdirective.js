@@ -10,8 +10,10 @@ nwslData
       sort: '&',
       year: "@",
       title: "@",
-      sortText: "@"
+      sortText: "@",
+      clicked: "="
     },
+    controller: 'GraphsCtrl',
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     link: function (scope, element, attrs) {
       nwslDataService.getRidOfZeroes(scope.year).then(function (data) {
@@ -122,11 +124,11 @@ nwslData
         yLabel
           .transition()
           .duration(500)
-          
+
         var bars = chart.selectAll(".bar")
           .data(data, function(d) {return d.NAME;});
 
-         bars.transition()
+        bars.transition()
           .duration(500)
           .attr("class", "bar")
           .attr("x", function(d) { return x(d.NAME); })
@@ -177,10 +179,10 @@ nwslData
 
       update(data);
 
-      var keepTrack = 0;
       scope.team = function(team) {
-        keepTrack++;
-        if (keepTrack % 2 !== 0) {
+        if (team === "all") {
+          update(data);
+        } else {
           var filterData = [];
           data.forEach(function(elem) {
             if (elem.team === team) {
@@ -190,8 +192,6 @@ nwslData
           })
 
           update(filterData);
-        } else {
-          update(data)
         }
       };
 

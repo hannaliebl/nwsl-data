@@ -42,6 +42,20 @@ nwslData
       }, function(result) {
         console.log("error:" + result);
       });
+    },
+    getTeams: function(year) {
+      return getRawData(year).then(function(result) {
+        var allTeams = [];
+        for (var i = 0; i < result.length; i++) {
+          allTeams.push(result[i].team);
+        }
+        var uniqueTeams = allTeams.filter(function(value, i, arr) {
+          return i === arr.indexOf(value);
+        });
+        return uniqueTeams;
+      }, function(result) {
+        console.log("error:" + result);
+      });
     }
   };
 });
