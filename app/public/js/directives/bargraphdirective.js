@@ -10,16 +10,15 @@ nwslData
       sort: '&',
       year: "@",
       title: "@",
-      sortText: "@",
-      clicked: "="
+      sortText: "@"
     },
     controller: 'GraphsCtrl',
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     link: function (scope, element, attrs) {
       nwslDataService.getRidOfZeroes(scope.year).then(function (data) {
 
-      var margin = {top: 20, right: 30, bottom: 120, left: 40},
-          width = 1200 - margin.left - margin.right,
+      var margin = {top: 20, right: 10, bottom: 120, left: 40},
+          width = 950 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
 
       var teamColors = {
