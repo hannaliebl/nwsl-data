@@ -1,21 +1,80 @@
+$textcolor: #888;
+$headingcolor: #666;
+$linkcolor: #359bcb;
+$linkhover: #c12155;
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: $textcolor;
   font-size: 62.5%;
 }
 
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: $linkcolor;
+  &:hover {
+      color: $linkhover;
+      transition: 0.5s all;
+    }
+}
+
 h1 {
-  font-size: 4rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 3rem;
   padding: 0;
   margin: 20px 0 10px 0;
   font-weight: 700;
+  color: $headingcolor
+}
+
+h2 {
+  @extend h1;
+  font-weight: 400;
+  font-size: 2.4rem;
 }
 
 .subheading {
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 1.4rem;
   font-weight: 200;
+  color: $textcolor;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header.toplevel {
+  h1 {
+    font-size: 5rem;
+    padding: 0;
+    margin:0 0 5px 0;
+    line-height: 0.8;
+  }
+  nav {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav li {
+    display: inline;
+    padding: 20px;
+  }
+  nav a {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
 }
 
 //buttons

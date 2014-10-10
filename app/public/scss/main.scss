@@ -1,14 +1,21 @@
+* { 
+  box-sizing: border-box; 
+}
+
+$body: #359bcb;
+
 body {
   margin: 0;
   padding: 0;
+  background: $body;
 }
 
 .container {
-  max-width: 960px;
-  background: #eee;
+  max-width: 1025px;
+  background: #fff;
   padding: 40px;
   margin: 0 auto;
 }
 
-@import 'graphs';
 @import 'typography';
+@import 'graphs';

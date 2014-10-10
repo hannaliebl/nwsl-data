@@ -1,4 +1,14 @@
-<button ng-click="sort()">{{sortText}}</button>
-<label for=""><input id="all" checked="checked" type="radio" name="team-filter" ng-click="team('all')">All Teams</label>
-<label ng-repeat="city in cities" id="{{city}}">{{city}}<input type="radio" name="team-filter" ng-click="team(city)"></label>
-<div id="goalscorers"><h1>{{title}}</h1></div>
+<h2>{{title}}</h2>
+<button ng-click="sort()" ng-if="teamFilter === 'all' || teamFilter === undefined">{{sortText}}</button>
+<div class="team-filter">
+<label id="all">
+  <input id="all" ng-model="teamFilter" ng-init="teamFilter === 'all'" ng-checked="true" value="all" type="radio" name="team-filter" ng-click="team('all')" />
+  ALL TEAMS
+  </label>
+  <label ng-repeat="city in cities" id="{{city}}">
+    <input type="radio" ng-model="$parent.teamFilter" value={{city}} name="team-filter" ng-click="team(city)" />
+    {{city | uppercase}}
+  </label>
+</div>
+<div id="goalscorers"><p class="hover-label">{{$parent.details.NAME}}</p>
+</div>

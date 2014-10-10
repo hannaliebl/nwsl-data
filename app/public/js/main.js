@@ -6,9 +6,13 @@ var nwslData = angular.module("nwslData", ["ngRoute", "ngAnimate"])
         templateUrl: "./partials/graphs.html",
         controller:"GraphsCtrl"
       })
+      .when("/2013-data", {
+        templateUrl: "./partials/graphs-2013.html",
+        controller:"Graphs2013Ctrl"
+      })
       .when("/about", {
         templateUrl: "./partials/about.html",
-        controller:"ContactCtrl"
+        controller:"AboutCtrl"
       })
       .otherwise({
         redirectTo: "/"

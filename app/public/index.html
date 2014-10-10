@@ -6,24 +6,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>NWSL Data</title>
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani:400,700|Roboto:400,300' rel='stylesheet' type='text/css'>
     <!-- styles -->
     <link rel="stylesheet" href="./css/main.min.css"/>
   </head>
   <body>
     <div class="container">
-      <h1>NWSL Data</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/#/about">About</a>
-          </li>
-        </ul>
-      </nav>
+      <header class="toplevel text-center">
+        <h1>NWSL Data</h1>
+        <p class="subheading text-center">Graphs and Data Visualizations about the National Women's Soccer League</p>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">2014 Data</a>
+            </li>
+            <li>
+              <a href="/#/2013-data">2013 Data</a>
+            </li>
+            <li>
+              <a href="/#/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <!-- views -->
       <div ng-view></div>
+      <footer>
+        <p>Made by <a href="http://www.hannaliebl.com">Hanna Liebl</a>, see it on <a href="https://github.com/hannaliebl/nwsl-data">Github</a></p>
+      </footer>
     </div>
     <!-- scripts -->
     <!-- build:js ./js/vendor.min.js -->
@@ -36,6 +46,7 @@
     <script src="./js/main.js"></script>
     <!-- Controllers -->
     <script src="./js/controllers/graphscontroller.js"></script>
+    <script src="./js/controllers/graphs2013controller.js"></script>
     <script src="./js/controllers/aboutcontroller.js"></script>
     <!-- Directives -->
     <script src="./js/directives/bargraphdirective.js"></script>

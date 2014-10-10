@@ -167,7 +167,7 @@ nwslData
             .attr("y", function(d) { return y(d.G); })
             .attr("x", function(d) { return x(d.NAME); })
             .attr("height", function(d) { return height - y(d.G); })
-            .style("opacity", 1);
+            .style("opacity", 0.8);
 
           bars.exit()
             .transition()

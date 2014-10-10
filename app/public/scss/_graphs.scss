@@ -1,5 +1,22 @@
 .graph-container {
   position: relative;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    font-size: 1.4rem;
+    &:hover {
+      color: $linkhover;
+    }
+  }
+  input[type="radio"]:checked { 
+    color: $linkhover; 
+  } 
+}
+
+.team-filter {
+
 }
 
 .hover-label {
@@ -13,16 +30,23 @@ rect {
   stroke-width: 1px;
 }
 
-text {
-  font-size: 0.9rem;
-}
-
-.axis text {
-  font: 12px sans-serif;
+#goalscorers svg text {
+  font-size: 0.7rem;
 }
 
 .axis path, .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #333;
   shape-rendering: crispEdges;
+}
+
+#goalscorers svg {
+  background: url('/img/kimlittle.jpg') 50% 50% no-repeat;
+  background-size: cover;
+}
+
+#goalscorers rect.bar {
+  &:hover {
+    cursor: pointer;
+  }
 }
