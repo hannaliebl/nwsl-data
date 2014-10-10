@@ -5,14 +5,13 @@
   }
   label {
     cursor: pointer;
-    font-size: 1.4rem;
     &:hover {
       color: $linkhover;
     }
   }
   input[type="radio"]:checked+label { 
     color: $linkhover; 
-  } 
+  }
 }
 
 .team-filter {

@@ -22,39 +22,39 @@ nwslData
           height = 700 - margin.top - margin.bottom;
 
       var teamColors = {
-        boston: {
+        "boston": {
             stroke: "#004890",
             fill: "#004890"
           },
-        chicago: {
+        "chicago": {
             stroke: "#1BB6EC",
             fill: "#1BB6EC"
           },
-        kansascity: {
+        "kansas city": {
             stroke: "#000",
             fill: "#000"
           },
-        portland: {
+        "portland": {
             stroke:"#113B2D",
             fill: "#113B2D"
           },
-        seattle: {
+        "seattle": {
             stroke: "#949DA4",
             fill: "#949DA4"
           },
-        jersey: {
+        "new jersey": {
             stroke: "#56077A",
             fill: "#56077A"
           },
-        dc: {
+        "washington dc": {
             stroke: "#C32033",
             fill: "#C32033"
           },
-        wny: {
+        "rochester": {
             stroke: "#FBEE01",
             fill: "#FBEE01"
           },
-        houston: {
+        "houston": {
             stroke: "#F5853D",
             fill: "#F5853D"
           }
