@@ -10,7 +10,7 @@
       color: $linkhover;
     }
   }
-  input[type="radio"]:checked { 
+  input[type="radio"]:checked+label { 
     color: $linkhover; 
   } 
 }

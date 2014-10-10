@@ -1,14 +1,16 @@
 <h2>{{title}}</h2>
 <button ng-click="sort()" ng-if="teamFilter === 'all' || teamFilter === undefined">{{sortText}}</button>
 <div class="team-filter">
-<label id="all">
-  <input id="all" ng-model="teamFilter" ng-init="teamFilter === 'all'" ng-checked="true" value="all" type="radio" name="team-filter" ng-click="team('all')" />
-  ALL TEAMS
-  </label>
-  <label ng-repeat="city in cities" id="{{city}}">
-    <input type="radio" ng-model="$parent.teamFilter" value={{city}} name="team-filter" ng-click="team(city)" />
-    {{city | uppercase}}
-  </label>
+  <span>
+    <input id="all" ng-model="teamFilter" ng-init="teamFilter === 'all'" ng-checked="true" value="all" type="radio" name="team-filter" ng-click="team('all')" />
+    <label for="all">ALL TEAMS
+    </label>
+  </span>
+  <span ng-repeat="city in cities">
+    <input type="radio" ng-model="$parent.teamFilter" value={{city}} name="team-filter" ng-click="team(city)" id="{{city}}"/>
+    <label for="{{city}}">{{city | uppercase}}
+    </label>
+  </span>
 </div>
 <div id="goalscorers"><p class="hover-label">{{$parent.details.NAME}}</p>
 </div>
