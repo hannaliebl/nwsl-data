@@ -5,12 +5,22 @@
   }
   label {
     cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 20px;
+    margin: 5px 10px 5px 0;
+    border: 1px solid #ddd;
+    display: inline-block;
+    max-width: 200px;
     &:hover {
-      color: $linkhover;
+      background: lighten($body, 45%);
+      transition: all 0.5s;
     }
   }
   input[type="radio"]:checked+label { 
-    color: $linkhover; 
+    color: #fff; 
+    background: lighten($body, 30%);
+    transition: all 0.5s;
   }
 }
 
@@ -18,10 +28,17 @@
 
 }
 
+#goalscorers {
+  position: relative;
+}
+
 .hover-label {
+  display: block;
   position: absolute;
-  top: 0;
-  left: 50px;
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+  top: 5px;
+  right: 0px;
   font-size: 50px;
 }
 
@@ -29,17 +46,32 @@ rect {
   stroke-width: 1px;
 }
 
-#goalscorers svg text {
-  font-size: 0.7rem;
+#goalscorers svg {
+  text {
+    font-size: 0.7rem;
+    fill: #555;
+  }
+  path.domain {
+    fill: rgba(0,0,0,0);
+    stroke: #555;
+  }
 }
 
-.axis path, .axis line {
+.tick line {
   fill: none;
-  stroke: #333;
+  stroke: #555;
+  stroke-width: 1.4px;
+}
+
+.axis path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2.5px;
   shape-rendering: crispEdges;
 }
 
 #goalscorers svg {
+  border: 5px solid #ddd;
   background: url('/img/kimlittle.jpg') 50% 50% no-repeat;
   background-size: cover;
 }

@@ -11,28 +11,31 @@
     <link rel="stylesheet" href="./css/main.min.css"/>
   </head>
   <body>
-    <div class="container">
       <header class="toplevel text-center">
-        <h1>NWSL Data</h1>
-        <p class="subheading text-center">Graphs and Data Visualizations about the National Women's Soccer League</p>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">2014 Data</a>
-            </li>
-            <li>
-              <a href="/#/2013-data">2013 Data</a>
-            </li>
-            <li>
-              <a href="/#/about">About</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="container">
+          <h1>NWSL Data</h1>
+          <p class="subheading text-center">Graphs and Data Visualizations about the National Women's Soccer League</p>
+          <nav>
+            <ul>
+              <li>
+                <a href="/">2014 Data</a>
+              </li>
+              <li>
+                <a href="/#/2013-data">2013 Data</a>
+              </li>
+              <li>
+                <a href="/#/about">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <!-- views -->
       <div ng-view></div>
-      <footer>
-        <p>Made by <a href="http://www.hannaliebl.com">Hanna Liebl</a>, see it on <a href="https://github.com/hannaliebl/nwsl-data">Github</a></p>
+      <footer class="toplevel">
+        <div class="container">
+          <p>Made by <a href="http://www.hannaliebl.com">Hanna Liebl</a>, see it on <a href="https://github.com/hannaliebl/nwsl-data">Github</a></p>
+        </div>
       </footer>
     </div>
     <!-- scripts -->
