@@ -4,6 +4,7 @@ nwslData
   return {
     restrict: "AE",
     scope: {
+      photo: "@",
       team: "&",
       hover: '&',
       hoverLeave: '&',
