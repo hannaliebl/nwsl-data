@@ -11,7 +11,8 @@ nwslData
       sort: '&',
       year: "@",
       title: "@",
-      sortText: "@"
+      sortText: "@",
+      show: "="
     },
     controller: 'GraphsCtrl',
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
@@ -152,10 +153,12 @@ nwslData
           .attr("height", 0)
           .style("opacity", 0)
           .on('mouseover', function(d,i) {
-            return scope.hover({item: d});
+            scope.$apply(scope.hover({item: d}));
+            //return scope.hover({item: d});
           })
           .on('mouseleave', function(d,i) {
-            return scope.hoverLeave({item: d});
+            scope.$apply(scope.hoverLeave({item: d}));
+            //return scope.hoverLeave({item: d});
           })
           .attr("fill", function(d) {
             return teamColors[d.team].fill;

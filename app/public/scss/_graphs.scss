@@ -25,7 +25,16 @@
 }
 
 .team-filter {
-
+  button {
+    border: 1px solid #eee;
+    background: none;
+    padding: 5px;
+    margin: 0;
+    min-width: 0;
+    &:hover {
+      background: lighten($body, 45%);
+    }
+  }
 }
 
 #goalscorers {
@@ -36,10 +45,21 @@
   display: block;
   position: absolute;
   background: rgba(255,255,255,0.5);
-  padding: 10px;
+  padding: 5px;
   top: 5px;
   right: 0px;
-  font-size: 50px;
+  opacity: 0;
+  h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  span {
+    font-size: 1.4rem;
+  }
+}
+
+.hover-label.active {
+  opacity: 1;
 }
 
 rect {

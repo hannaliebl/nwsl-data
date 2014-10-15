@@ -27,7 +27,7 @@ a {
 
 h1 {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   padding: 0;
   margin: 20px 0 10px 0;
   font-weight: 700;
@@ -37,7 +37,7 @@ h1 {
 h2 {
   @extend h1;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
 }
 
 .subheading {
@@ -98,5 +98,8 @@ button {
   cursor: pointer;
   &:hover {
     transition: all 400ms;
+  }
+  &:focus {
+    outline: none;
   }
 }
