@@ -5,6 +5,9 @@ nwslData
   nwslDataService.getTeams(2014).then(function(data) {
     $scope.cities = data;
   });
+  nwslDataService.getGoalsPerHr(2014).then(function(data) {
+    console.log(data);
+  });
   $scope.show = false;
   $scope.showDetail = function (item) {
     $scope.show = true;

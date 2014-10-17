@@ -56,6 +56,18 @@ nwslData
       }, function(result) {
         console.log("error:" + result);
       });
+    },
+    getGoalsPerHr: function(year) {
+      return this.getRidOfZeroes(year).then(function(result) {
+        for (var i = 0; i < result.length; i++) {
+          var productivity = (result[i].G/result[i].MP) * 60;
+          result[i].goalsPerHr = productivity;
+        }
+        console.log(result);
+        return result;
+      }, function(result) {
+        console.log("error:" + result);
+      });
     }
   };
 });
