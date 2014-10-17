@@ -4,7 +4,6 @@ nwslData
   return {
     restrict: "AE",
     scope: {
-      photo: "@",
       team: "&",
       hover: '&',
       hoverLeave: '&',
@@ -12,16 +11,32 @@ nwslData
       year: "@",
       title: "@",
       sortText: "@",
-      show: "="
+      show: "=",
+      cityName: "@"
     },
     controller: 'GraphsCtrl',
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     link: function (scope, element, attrs) {
       nwslDataService.getRidOfZeroes(scope.year).then(function (data) {
 
-      var margin = {top: 20, right: 10, bottom: 120, left: 40},
+      var margin = {top: 20, right: 15, bottom: 120, left: 40},
           width = 950 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
+
+      var teamBackgrounds = {
+        "all": {
+          img: "kimlittle.jpg",
+          credit: "https://www.flickr.com/photos/alza06/3530677425/in/set-72157618155404356"
+        },
+        "boston": {
+          img: "hao.jpg",
+          credit: "http://www.flickr.com/photos/curoninja/2760299890/in/photolist-5cVfZq-5cQWtP-5cQWqt-5cQWoK-5cQWnn-c9aumG-c9aufQ-c9atVY-c9atTs-c9atQY-c9atGb-c9arH7-c9arD3-c9arj7-c7ows1-bnBDS6-aGRj1R-asmWsK-9LwteA-KR6q"
+        },
+        "chicago": {
+          img: "press.jpg",
+          credit: "https://www.flickr.com/photos/hermancaroan/14015891396"
+        }
+      };
 
       var teamColors = {
         "boston": {
@@ -181,10 +196,11 @@ nwslData
       }
 
       update(data);
-
+      scope.cityName = teamBackgrounds['all'];
       scope.team = function(team) {
         if (team === "all") {
           update(data);
+          scope.cityName = teamBackgrounds['all'];
         } else {
           var filterData = [];
           data.forEach(function(elem) {
@@ -195,6 +211,7 @@ nwslData
           })
 
           update(filterData);
+          scope.cityName = teamBackgrounds[team];
         }
       };
 

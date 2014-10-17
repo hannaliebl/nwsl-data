@@ -90,10 +90,8 @@ rect {
   shape-rendering: crispEdges;
 }
 
-#goalscorers svg {
-  border: 5px solid #ddd;
-  background: url('/img/kimlittle.jpg') 50% 50% no-repeat;
-  background-size: cover;
+#goalscorers {
+   border: 4px solid #ddd;
 }
 
 #goalscorers rect.bar {
