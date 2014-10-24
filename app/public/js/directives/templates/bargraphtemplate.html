@@ -1,4 +1,4 @@
-<h2>{{title}}</h2>
+<h2>{{title}}{{show}}</h2>
 <div class="team-filter">
   <span>
     <input id="all" ng-model="teamFilter" ng-init="teamFilter === 'all'" ng-checked="true" value="all" type="radio" name="team-filter" ng-click="team('all')" />
@@ -14,7 +14,7 @@
     </label>
   </span>
 </div>
-<div id="goalscorers" style="background: url('img/{{cityName.img}}') 50% 50% no-repeat;background-size:cover;">
+<div id="{{svgId}}" style="background: url('img/{{cityName.img}}') 50% 50% no-repeat;background-size:cover;">
   <div class="hover-label" ng-class="{ 'active' : show }">
     <h1>{{$parent.details.NAME}}</h1>
     <span>Goals: {{$parent.details.G}}</span>

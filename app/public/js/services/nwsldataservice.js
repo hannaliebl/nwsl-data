@@ -15,6 +15,20 @@ nwslData
     return deferred.promise;
   };
 
+  var generalSort = function(data, measure) {
+    data.sort(function(a,b) {
+        if (a.team === b.team) {
+          if (a[measure] > b[measure]) return -1;
+          if (a[measure] < b[measure]) return 1;
+          return 0;
+        }
+        if (a.team > b.team) return 1;
+        if (a.team < b.team) return -1;
+          return 0;
+      });
+    return data;
+  };
+
   return {
     rawData: function(year) {
       return getRawData(year);
@@ -28,17 +42,7 @@ nwslData
             goalScorers.push(item);
           }
         });
-        goalScorers.sort(function(a,b) {
-          if (a.team === b.team) {
-            if (a.G > b.G) return -1;
-            if (a.G < b.G) return 1;
-            return 0;
-          }
-          if (a.team > b.team) return 1;
-          if (a.team < b.team) return -1;
-            return 0;
-        });
-        return goalScorers;
+        return generalSort(goalScorers, "G");
       }, function(result) {
         console.log("error:" + result);
       });
@@ -63,8 +67,7 @@ nwslData
           var productivity = (result[i].G/result[i].MP) * 60;
           result[i].goalsPerHr = productivity;
         }
-        console.log(result);
-        return result;
+        return generalSort(result, "goalsPerHr");
       }, function(result) {
         console.log("error:" + result);
       });
