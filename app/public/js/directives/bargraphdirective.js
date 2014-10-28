@@ -18,9 +18,9 @@ nwslData
       title: "@",
       sortText: "@",
       show: "=",
-      cityName: "@"
+      cityName: "@",
+      cities: "&"
     },
-    controller: 'GraphsCtrl',
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     link: function (scope, element, attrs) {
       nwslDataService[scope.source](scope.year).then(function (data) {
@@ -115,7 +115,7 @@ nwslData
             .attr("y", -30)
             .attr("x", -220)
             .attr("transform", "rotate(-90)")
-            .text("Goals Scored");
+            .text(scope.labely);
 
         function update (data) {
 

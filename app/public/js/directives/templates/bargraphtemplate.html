@@ -1,16 +1,32 @@
-<h2>{{title}}{{show}}</h2>
+<h2>{{title}} teamfilter: {{teamFilter}}</h2>
 <div class="team-filter">
+<form name="myForm">
+  <label>
+    <input type="radio" ng-model="color" value="red">  
+    Red
+  </label>
+  <label>
+    <input type="radio" ng-model="color" ng-value="specialValue"> 
+    Green
+  </label>
+  <input type="radio" ng-model="color" ng-value="specialValue"> Green <br/>
+  <input type="radio" ng-model="color" value="blue"> Blue <br/>
+  <tt>color = {{color | json}}</tt><br/>
+ </form>
   <span>
-    <input id="all" ng-model="teamFilter" ng-init="teamFilter === 'all'" ng-checked="true" value="all" type="radio" name="team-filter" ng-click="team('all')" />
-    <label for="all">ALL TEAMS
+    <label>
+      <input ng-model="teamFilter" ng-init="teamFilter === 'all'" ng-checked="true" value="all" type="radio" name="team-filter" ng-click="team('all')" />
+      ALL TEAMS
     </label>
   </span>
   <button ng-click="sort()" ng-if="teamFilter === 'all' || teamFilter === undefined">{{sortText}}</button>
+  <p>teamfilter: {{teamFilter}}</p>
 </div>
 <div class="team-filter">
-  <span ng-repeat="city in cities">
-    <input type="radio" ng-model="$parent.teamFilter" value={{city}} name="team-filter" ng-click="team(city)" id="{{city}}"/>
-    <label for="{{city}}">{{city | uppercase}}
+  <span ng-repeat="city in $parent.cities">
+    <label>
+      <input type="radio" ng-model="$parent.teamFilter" value="{{city}}" name="team-filter" ng-click="team(city)" />
+      {{city | uppercase}}
     </label>
   </span>
 </div>
