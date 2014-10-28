@@ -1,7 +1,7 @@
 .graph-container {
   position: relative;
   input[type="radio"] {
-    //display: none;
+    display: none;
   }
   label {
     cursor: pointer;
@@ -17,7 +17,7 @@
       transition: all 0.5s;
     }
   }
-  input[type="radio"]:checked+label { 
+  input[type="radio"]:checked+label, label.active { 
     color: #fff; 
     background: lighten($body, 30%);
     transition: all 0.5s;
@@ -37,7 +37,7 @@
   }
 }
 
-#goalscorers {
+#goalscorers, #goalproductivity {
   position: relative;
 }
 
@@ -66,7 +66,7 @@ rect {
   stroke-width: 1px;
 }
 
-#goalscorers svg {
+#goalscorers svg, #goalproductivity svg {
   text {
     font-size: 0.7rem;
     fill: #555;
@@ -90,11 +90,11 @@ rect {
   shape-rendering: crispEdges;
 }
 
-#goalscorers {
+#goalscorers, #goalproductivity {
    border: 4px solid #ddd;
 }
 
-#goalscorers rect.bar {
+#goalproductivity rect.bar, #goalscorers rect.bar {
   &:hover {
     cursor: pointer;
   }
