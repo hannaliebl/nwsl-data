@@ -3,13 +3,13 @@
   <p>April 12, 2014 to August 30, 2014. FC Kansas City were the league champions.</p>
   <div ng-controller="GraphsCtrl">
     <div class="graph-container">
-      <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
+      <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
     </bargraph>
     </div>
   </div>
   <div ng-controller="GraphsCtrl">
     <div class="graph-container">
-      <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
+      <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
     </bargraph>
     </div>
   </div>

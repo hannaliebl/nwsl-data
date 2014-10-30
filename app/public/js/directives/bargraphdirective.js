@@ -16,10 +16,9 @@ nwslData
       sort: '&',
       year: "@",
       title: "@",
+      hoverText: "@",
       sortText: "@",
-      show: "=",
-      cityName: "@",
-      cities: "&"
+      show: "="
     },
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     link: function (scope, element, attrs) {
