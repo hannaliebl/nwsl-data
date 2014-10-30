@@ -22,6 +22,12 @@ server.get('/api/:year', function (req, res) {
       data = JSON.parse(data);
       res.json(data);
     });
+  } else if (req.params.year === "2013") {
+    fs.readFile(__dirname +'/data/2013.json', 'utf8', function (err, data) {
+      if (err) throw err;
+      data = JSON.parse(data);
+      res.json(data);
+    });
   } else {
     res.status(404).send("404: Not Found").end();
   }
