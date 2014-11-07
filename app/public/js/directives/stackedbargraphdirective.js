@@ -1,5 +1,5 @@
 nwslData
-.directive('bargraph', function (nwslDataService, $timeout) {
+.directive('stackedBargraph', function (nwslDataService, $timeout) {
   'use strict';
   return {
     restrict: "AE",
@@ -20,9 +20,10 @@ nwslData
       sortText: "@",
       show: "="
     },
-    templateUrl: '/js/directives/templates/bargraphtemplate.html',
+    templateUrl: '/js/directives/templates/stackedbargraphtemplate.html',
     link: function (scope, element, attrs) {
-      nwslDataService[scope.source](scope.year).then(function (data) {
+      nwslDataService.offFrameShots("2014").then(function (data) {
+        console.log(data);
         var margin = {top: 20, right: 15, bottom: 120, left: 40},
           width = 950 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
@@ -87,7 +88,7 @@ nwslData
         var y = d3.scale.linear()
           .range([height, 0]);
 
-        var chart = d3.select("#"+scope.svgId).append("svg")
+        var chart = d3.select("#stacked").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
@@ -116,10 +117,25 @@ nwslData
             .attr("transform", "rotate(-90)")
             .text(scope.labely);
 
-        function update (data) {
+        var color = d3.scale.ordinal()
+          .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-          x.domain(data.map(function(d) { return d[scope.scalex]; }));
-          y.domain([0, d3.max(data, function(d) { return d[scope.scaley]; })]);
+
+        function update (data) {
+          color.domain(d3.keys(data[0]).filter(function(key) { return key == "d.NAME"; }));
+
+          data.forEach(function(d) {
+            var y0 = 0;
+            //d.allShots = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+            d.allShots = [{name: "Shots on Goal", y0: 0, y1: d.SOG, team: d.team}, {name: "Off Target Shofts", y0: d.SOG, y1: d.offFrameShots, team: d.team}];
+            d.total = d.SH;
+            console.log("d in foreach", d);
+          });
+
+          data.sort(function(a, b) { return b.team - a.team; });
+
+          x.domain(data.map(function(d) { return d.NAME; }));
+          y.domain([0, d3.max(data, function(d) { return d.SH; })]);
           
           xAxisG
             .transition()
@@ -144,58 +160,82 @@ nwslData
             .transition()
             .duration(500)
 
-          var bars = chart.selectAll(".bar")
-            .data(data, function(d) {return d[scope.scalex];});
+          var players = chart.selectAll('.players')
+            .data(data)
+            .enter().append("g")
+            .attr("class", "g")
+            .attr("transform", function(d) { return "translate(" + x(d.NAME) + ",0)"; });
 
-          bars.transition()
-            .duration(500)
-            .attr("class", "bar")
-            .attr("x", function(d) { return x(d[scope.scalex]); })
-            .attr("y", function(d) { return y(d[scope.scaley]); })
-            .attr("height", function(d) { return height - y(d[scope.scaley]); })
+          var bars = players.selectAll("rect")
+            .data(function(d) {return d.allShots; })
+          .enter().append("rect")
             .attr("width", x.rangeBand())
+            .attr("y", function(d) { 
+              console.log("d in y func", d);
+              console.log("y in y func", y(d.y1));
+              return y(d.y1); })
+            .attr("height", function(d) { return Math.abs(y(d.y0) - y(d.y1)); })
             .attr("fill", function(d) {
               return teamColors[d.team].fill;
-            })
-            .attr("stroke", function(d) {
-              return teamColors[d.team].stroke;
             });
 
-          //enter
-          bars.enter()
-            .append("rect")
-            .attr("width", x.rangeBand())
-            .attr("class", "bar")
-            .attr("x", 0)
-            .attr("y", y(0))
-            .attr("height", 0)
-            .style("opacity", 0)
-            .on('mouseover', function(d,i) {
-              scope.$apply(scope.hover({item: d}));
-              //return scope.hover({item: d});
-            })
-            .on('mouseleave', function(d,i) {
-              scope.$apply(scope.hoverLeave({item: d}));
-              //return scope.hoverLeave({item: d});
-            })
-            .attr("fill", function(d) {
-              return teamColors[d.team].fill;
-            })
-            .attr("stroke", function(d) {
-              return teamColors[d.team].stroke;
-            })
-            .transition()
-              .duration(500)
-              .attr("y", function(d) { return y(d[scope.scaley]); })
-              .attr("x", function(d) { return x(d[scope.scalex]); })
-              .attr("height", function(d) { return height - y(d[scope.scaley]); })
-              .style("opacity", 0.8);
+          // bars.selectAll("rect")
+          //   .data(function(d) { return d.shots; })
+          // .enter().append("rect")
+          //   .attr("width", x.rangeBand())
+          //   .attr("y", function(d) { return y(d.y1); })
+          //   .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+          //   .style("fill", function(d) { return color(d.name); });
 
-            bars.exit()
-              .transition()
-              .duration(500)
-              .style("opacity", 0)
-              .remove();
+          // bars.transition()
+          //   .duration(500)
+          //   .attr("class", "bar")
+          //   .attr("x", function(d) { return x(d[scope.scalex]); })
+          //   .attr("y", function(d) { return y(d[scope.scaley]); })
+          //   .attr("height", function(d) { return height - y(d[scope.scaley]); })
+          //   .attr("width", x.rangeBand())
+          //   .attr("fill", function(d) {
+          //     return teamColors[d.team].fill;
+          //   })
+          //   .attr("stroke", function(d) {
+          //     return teamColors[d.team].stroke;
+          //   });
+
+          //enter
+          // bars.enter()
+          //   .append("rect")
+          //   .attr("width", x.rangeBand())
+          //   .attr("class", "bar")
+          //   .attr("x", 0)
+          //   .attr("y", y(0))
+          //   .attr("height", 0)
+          //   .style("opacity", 0)
+          //   .on('mouseover', function(d,i) {
+          //     scope.$apply(scope.hover({item: d}));
+          //     //return scope.hover({item: d});
+          //   })
+          //   .on('mouseleave', function(d,i) {
+          //     scope.$apply(scope.hoverLeave({item: d}));
+          //     //return scope.hoverLeave({item: d});
+          //   })
+          //   .attr("fill", function(d) {
+          //     return teamColors[d.team].fill;
+          //   })
+          //   .attr("stroke", function(d) {
+          //     return teamColors[d.team].stroke;
+          //   })
+          //   .transition()
+          //     .duration(500)
+          //     .attr("y", function(d) { return y(d[scope.scaley]); })
+          //     .attr("x", function(d) { return x(d[scope.scalex]); })
+          //     .attr("height", function(d) { return height - y(d[scope.scaley]); })
+          //     .style("opacity", 0.8);
+
+          //   bars.exit()
+          //     .transition()
+          //     .duration(500)
+          //     .style("opacity", 0)
+          //     .remove();
         }
 
         update(data);
@@ -289,7 +329,7 @@ nwslData
             .delay(delay);
           }
         };
-      });
+       });
     }
   };
 });

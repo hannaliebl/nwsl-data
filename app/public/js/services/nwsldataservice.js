@@ -71,6 +71,17 @@ nwslData
       }, function(result) {
         console.log("error:" + result);
       });
+    },
+    offFrameShots: function(year) {
+      return this.getRidOfZeroes(year).then(function(result) {
+        for (var i = 0; i < result.length; i++) {
+          var offFrameShots = result[i].SH - result[i].SOG;
+          result[i].offFrameShots = offFrameShots;
+        }
+        return generalSort(result, "SH");
+      }, function(result) {
+        console.log("error:" + result);
+      });
     }
   };
 });
