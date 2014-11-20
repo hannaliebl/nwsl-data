@@ -1,21 +1,17 @@
 nwslData
-.controller('Graphs2013Ctrl', function($scope, nwslDataService) {
+.controller('Graphs2013Ctrl', function($scope, $timeout, nwslDataService) {
   'use strict';
+  $scope.test = [1, 2];
   nwslDataService.getTeams(2013).then(function(data) {
     $scope.cities = data;
   });
+  $scope.show = false;
   $scope.showDetail = function (item) {
-    $scope.$apply(function () {
-      if (!$scope.showDetail)
-        $scope.showDetail = true;
-        $scope.details = item;
-    });
+    $scope.show = true;
+    $scope.details = item;
   };
   $scope.hideDetail = function (item) {
-    $scope.$apply(function () {
-      if (!$scope.hideDetail)
-        $scope.hideDetail = true;
-        $scope.details = null;
-    });
+    $scope.show = false;
+    $scope.details = null;
   };
 });
