@@ -1,13 +1,13 @@
 <div class="container">
   <h1>2013 Season</h1>
   <p>April 13, 2013 to August 31, 2013. The Portland Thorns were the league champions.</p>
-  <div ng-controller="GraphsCtrl">
+  <div ng-controller="Graphs2013Ctrl">
     <div class="graph-container">
       <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
     </bargraph>
     </div>
   </div>
-  <div ng-controller="GraphsCtrl">
+  <div ng-controller="Graphs2013Ctrl">
     <div class="graph-container">
       <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
     </bargraph>

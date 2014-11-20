@@ -64,7 +64,7 @@ nwslData
     getGoalsPerHr: function(year) {
       return this.getRidOfZeroes(year).then(function(result) {
         for (var i = 0; i < result.length; i++) {
-          var productivity = (result[i].G/result[i].MP) * 60;
+          var productivity = ((result[i].G/result[i].MP) * 60).toFixed(3);
           result[i].goalsPerHr = productivity;
         }
         return generalSort(result, "goalsPerHr");
