@@ -135,7 +135,7 @@ nwslData
           data.sort(function(a, b) { return b.team - a.team; });
 
           x.domain(data.map(function(d) { return d.NAME; }));
-          y.domain([0, d3.max(data, function(d) { return d.SH; })]);
+          y.domain([0, d3.max(data, function(d) { return 70; })]);
           
           xAxisG
             .transition()

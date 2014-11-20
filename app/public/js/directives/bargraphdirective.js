@@ -29,16 +29,34 @@ nwslData
 
         var teamBackgrounds = {
           "all": {
-            img: "kimlittle.jpg",
-            credit: "https://www.flickr.com/photos/alza06/3530677425/in/set-72157618155404356"
+            img: "nwsl_fade.jpg"
           },
           "boston": {
-            img: "hao.jpg",
-            credit: "http://www.flickr.com/photos/curoninja/2760299890/in/photolist-5cVfZq-5cQWtP-5cQWqt-5cQWoK-5cQWnn-c9aumG-c9aufQ-c9atVY-c9atTs-c9atQY-c9atGb-c9arH7-c9arD3-c9arj7-c7ows1-bnBDS6-aGRj1R-asmWsK-9LwteA-KR6q"
+            img: "boston_fade.jpg"
           },
           "chicago": {
-            img: "press.jpg",
-            credit: "https://www.flickr.com/photos/hermancaroan/14015891396"
+            img: "chicago_fade.jpg"
+          },
+          "washington dc": {
+            img: "dc_fade.jpg"
+          },
+          "kansas city": {
+            img: "kansascity_fade.jpg"
+          },
+          "portland": {
+            img: "portland_fade.jpg"
+          },
+          "seattle": {
+            img: "seattle_fade.jpg"
+          },
+          "new jersey": {
+            img: "newjersey_fade.jpg"
+          },
+          "rochester": {
+            img: "rochester_fade.jpg"
+          },
+          "houston": {
+            img: "houston_fade.jpg"
           }
         };
 
@@ -172,11 +190,9 @@ nwslData
             .style("opacity", 0)
             .on('mouseover', function(d,i) {
               scope.$apply(scope.hover({item: d}));
-              //return scope.hover({item: d});
             })
             .on('mouseleave', function(d,i) {
               scope.$apply(scope.hoverLeave({item: d}));
-              //return scope.hoverLeave({item: d});
             })
             .attr("fill", function(d) {
               return teamColors[d.team].fill;
@@ -189,7 +205,7 @@ nwslData
               .attr("y", function(d) { return y(d[scope.scaley]); })
               .attr("x", function(d) { return x(d[scope.scalex]); })
               .attr("height", function(d) { return height - y(d[scope.scaley]); })
-              .style("opacity", 0.8);
+              .style("opacity", 0.9);
 
             bars.exit()
               .transition()

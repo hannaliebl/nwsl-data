@@ -16,10 +16,9 @@
     </label>
   </span>
 </div>
-<div id="{{svgId}}" style="background: url('img/{{cityName.img}}') 50% 50% no-repeat;background-size:cover;">
+<div id="{{svgId}}" style="background: url('img/{{cityName.img}}') 50% 20% no-repeat;">
   <div class="hover-label" ng-class="{ 'active' : show }">
     <h1>{{$parent.details.NAME}}</h1>
     <span>{{hoverText}} {{$parent.details[scaley]}}, </span><span>Team: {{$parent.details.team | uppercase}}</span>
   </div>
 </div>
-<a href="{{cityName.credit}}"><span>Photo Credit</span></a>
