@@ -38,25 +38,6 @@
       "RC":0
    },
    {  
-      "NAME":"Lisa De Vanna",
-      "team":"boston",
-      "GP":6,
-      "GS":5,
-      "MP":448,
-      "G":0,
-      "A":1,
-      "GWG":0,
-      "SH":12,
-      "SOG":3,
-      "C":1,
-      "CK":0,
-      "OFF":14,
-      "FC":3,
-      "FS":6,
-      "YC":0,
-      "RC":1
-   },
-   {  
       "NAME":"Kim DeCesare",
       "team":"boston",
       "GP":1,
@@ -168,25 +149,6 @@
       "FC":10,
       "FS":9,
       "YC":1,
-      "RC":0
-   },
-   {  
-      "NAME":"Kaylyn Kyle",
-      "team":"boston",
-      "GP":2,
-      "GS":2,
-      "MP":155,
-      "G":0,
-      "A":0,
-      "GWG":0,
-      "SH":0,
-      "SOG":0,
-      "C":0,
-      "CK":0,
-      "OFF":1,
-      "FC":2,
-      "FS":1,
-      "YC":0,
       "RC":0
    },
    {  

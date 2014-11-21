@@ -18,7 +18,8 @@ nwslData
       title: "@",
       hoverText: "@",
       sortText: "@",
-      show: "="
+      show: "=",
+      showteams: "@"
     },
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     link: function (scope, element, attrs) {
@@ -234,7 +235,7 @@ nwslData
           }
         };
 
-        scope.sortText = "Sort by Total Goals";
+        var orig = scope.sortText;
 
         var sortOrder = true;
         scope.sort = function() {
@@ -272,7 +273,7 @@ nwslData
             .selectAll("g")
             .delay(delay);
           } else {
-            scope.sortText = "Sort by Total Goals";
+            scope.sortText = orig;
             var x0 = x.domain(data.sort(function(a,b) {
               if (a.team === b.team) {
                 if (a[scope.scaley] > b[scope.scaley]) return -1;

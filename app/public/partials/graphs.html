@@ -1,17 +1,37 @@
 <div class="container">
-<stacked-bargraph></stacked-bargraph>
+<!-- <stacked-bargraph></stacked-bargraph> -->
   <h1>2014 Season</h1>
   <p>April 12, 2014 to August 30, 2014. FC Kansas City were the league champions.</p>
+  <h1>Goalscorers</h1>
   <div ng-controller="GraphsCtrl">
     <div class="graph-container">
-      <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
-    </bargraph>
+      <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
+      </bargraph>
     </div>
   </div>
   <div ng-controller="GraphsCtrl">
     <div class="graph-container">
-      <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
-    </bargraph>
+      <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals per Hour">
+      </bargraph>
+    </div>
+  </div>
+  <h1>Fouls/Cards</h1>
+  <div ng-controller="GraphsCtrl">
+    <div class="graph-container">
+      <bargraph source="getFoulsCommitted" scalex="NAME" scaley="FC" svg-id="foulscommitted" labelx="Player" labely="Fouls Committed" title="Fouls Committed" hover-text="Fouls Committed:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Total Fouls Committed">
+      </bargraph>
+    </div>
+  </div>
+  <div ng-controller="GraphsCtrl">
+    <div class="graph-container">
+      <bargraph source="getYellowCards" scalex="NAME" scaley="YC" svg-id="yellowcards" labelx="Player" labely="Fouls Committed" title="Yellow Cards" hover-text="Yellow Cards:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Yellow Cards">
+      </bargraph>
+    </div>
+  </div>
+  <div ng-controller="GraphsCtrl">
+    <div class="graph-container">
+      <bargraph source="getRedCards" scalex="NAME" scaley="YC" svg-id="redcards" labelx="Player" labely="Fouls Committed" title="Red Cards" hover-text="Red Cards:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="false" sort-text="Sort by Red Cards">
+      </bargraph>
     </div>
   </div>
 </div>

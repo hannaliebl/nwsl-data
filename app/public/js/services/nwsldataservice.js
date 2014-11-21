@@ -61,6 +61,48 @@ nwslData
         console.log("error:" + result);
       });
     },
+    getFoulsCommitted: function(year) {
+      return getRawData(year).then(function(result) {
+        var foulsCommitted = [];
+        JSON.stringify(result);
+        result.forEach(function(item, index) {
+          if (item.FC > 0) {
+            foulsCommitted.push(item);
+          }
+        });
+        return generalSort(foulsCommitted, "FC");
+      }, function(result) {
+        console.log("error:" + result);
+      });
+    },
+    getYellowCards: function(year) {
+      return getRawData(year).then(function(result) {
+        var yellowCards = [];
+        JSON.stringify(result);
+        result.forEach(function(item, index) {
+          if (item.YC > 0) {
+            yellowCards.push(item);
+          }
+        });
+        return generalSort(yellowCards, "YC");
+      }, function(result) {
+        console.log("error:" + result);
+      });
+    },
+    getRedCards: function(year) {
+      return getRawData(year).then(function(result) {
+        var redCards = [];
+        JSON.stringify(result);
+        result.forEach(function(item, index) {
+          if (item.RC > 0) {
+            redCards.push(item);
+          }
+        });
+        return generalSort(redCards, "RC");
+      }, function(result) {
+        console.log("error:" + result);
+      });
+    },
     getGoalsPerHr: function(year) {
       return this.getRidOfZeroes(year).then(function(result) {
         for (var i = 0; i < result.length; i++) {
