@@ -1,16 +1,71 @@
 <div class="container">
-  <h1>2013 Season</h1>
-  <p>April 13, 2013 to August 31, 2013. The Portland Thorns were the league champions.</p>
-  <div ng-controller="Graphs2013Ctrl">
-    <div class="graph-container">
-      <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
-    </bargraph>
+  <h1 class="page-heading">2013 Season</h1>
+  <h2>April 13, 2013 - August 31, 2013</h2>
+  <p>The Portland Thorns FC were the league champions, out of eight total teams. They defeated Western NY Flash in the final 2-0. Sky Blue FC and FC Kansas City also made it to the postseason.</p>
+  <section class="graph-group">
+    <h1 class="group-label">Goalscorers</h1>
+    <div ng-controller="Graphs2013Ctrl">
+      <div class="graph-container">
+        <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
+        </bargraph>
+      </div>
     </div>
-  </div>
-  <div ng-controller="Graphs2013Ctrl">
-    <div class="graph-container">
-      <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()">
-    </bargraph>
+    <div ng-controller="Graphs2013Ctrl">
+      <div class="graph-container">
+        <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals per Hour">
+        </bargraph>
+      </div>
     </div>
-  </div>
+  </section>
+  <section class="graph-group">
+    <h1 class="group-label">Fouls/Cards</h1>
+    <div ng-controller="Graphs2013Ctrl">
+      <div class="graph-container">
+        <bargraph source="getFoulsCommitted" scalex="NAME" scaley="FC" svg-id="foulscommitted" labelx="Player" labely="Fouls Committed" title="Fouls Committed" hover-text="Fouls Committed:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Total Fouls Committed">
+        </bargraph>
+      </div>
+    </div>
+    <div ng-controller="Graphs2013Ctrl">
+      <div class="graph-container">
+        <bargraph source="getYellowCards" scalex="NAME" scaley="YC" svg-id="yellowcards" labelx="Player" labely="Fouls Committed" title="Yellow Cards" hover-text="Yellow Cards:" city-name="all" year="2013" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Yellow Cards">
+        </bargraph>
+      </div>
+    </div>
+    <div class="graph-container">
+      <h2>Red Cards</h2>
+      <table dir="ltr" width="auto" border="2" summary="Red Cards earned in 2013 NWSL Season">
+        <colgroup width="auto" />
+        <colgroup id="colgroup" class="colgroup" align="center" valign="middle" title="title">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Red Cards</th>
+            <th scope="col">Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sophie Schmidt</td>
+            <td>1</td>
+            <td>Boston</td>
+          </tr>
+          <tr>
+            <td>Lauren Sesselmann</td>
+            <td>1</td>
+            <td>Kansas City</td>
+          </tr>
+          <tr>
+            <td>Kiersten Dallstream</td>
+            <td>1</td>
+            <td>Seattle</td>
+          </tr>
+          <tr>
+            <td>Jenny Ruiz William</td>
+            <td>1</td>
+            <td>Seattle</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 </div>

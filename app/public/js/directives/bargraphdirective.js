@@ -53,7 +53,7 @@ nwslData
           "new jersey": {
             img: "newjersey_fade.jpg"
           },
-          "rochester": {
+          "western ny": {
             img: "rochester_fade.jpg"
           },
           "houston": {
@@ -90,7 +90,7 @@ nwslData
               stroke: "#C32033",
               fill: "#C32033"
             },
-          "rochester": {
+          "western ny": {
               stroke: "#FBEE01",
               fill: "#FBEE01"
             },

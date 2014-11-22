@@ -94,7 +94,7 @@ nwslData
         var redCards = [];
         JSON.stringify(result);
         result.forEach(function(item, index) {
-          if (item.RC > 0) {
+          if (item.RC !== 0) {
             redCards.push(item);
           }
         });
