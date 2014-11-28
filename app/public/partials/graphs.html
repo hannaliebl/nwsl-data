@@ -19,6 +19,27 @@
     </div>
   </section>
   <section class="graph-group">
+    <h1 class="group-label">Goalkeepers</h1>
+    <div ng-controller="GraphsCtrl">
+      <div class="graph-container">
+        <bargraph source="getGoalsAllowedPerGame" scalex="NAME" scaley="GAGM" svg-id="goalsallowedpergame" labelx="Player" labely="Goals Allowed per Game" title="Goals Allowed per Game" hover-text="Goals Allowed per Game:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="false" sort-text="Sort by Goals Allowed per Game">
+        </bargraph>
+      </div>
+    </div>
+    <div ng-controller="GraphsCtrl">
+      <div class="graph-container">
+        <bargraph source="getSaves" scalex="NAME" scaley="SV" svg-id="saves" labelx="Player" labely="Saves" title="Saves" hover-text="Saves:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="false" sort-text="Sort by Total Saves">
+        </bargraph>
+      </div>
+    </div>
+    <div ng-controller="GraphsCtrl">
+      <div class="graph-container">
+        <bargraph source="getGoalsAllowed" scalex="NAME" scaley="GA" svg-id="goalsallowed" labelx="Player" labely="Goals Allowed" title="Goals Allowed" hover-text="Goals Allowed:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="false" sort-text="Sort by Total Goals Allowed">
+        </bargraph>
+      </div>
+    </div>
+  </section>
+  <section class="graph-group">
     <h1 class="group-label">Fouls/Cards</h1>
     <div ng-controller="GraphsCtrl">
       <div class="graph-container">

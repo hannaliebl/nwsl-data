@@ -61,6 +61,48 @@ nwslData
         console.log("error:" + result);
       });
     },
+    getGoalsAllowedPerGame: function(year) {
+      return getRawData(year).then(function(result) {
+        var saves = [];
+        JSON.stringify(result);
+        result.forEach(function(item, index) {
+          if (item.GAGM > 0) {
+            saves.push(item);
+          }
+        });
+        return generalSort(saves, "GAGM");
+      }, function(result) {
+        console.log("error:" + result);
+      });
+    },
+    getSaves: function(year) {
+      return getRawData(year).then(function(result) {
+        var saves = [];
+        JSON.stringify(result);
+        result.forEach(function(item, index) {
+          if (item.SV > 0) {
+            saves.push(item);
+          }
+        });
+        return generalSort(saves, "SV");
+      }, function(result) {
+        console.log("error:" + result);
+      });
+    },
+    getGoalsAllowed: function(year) {
+      return getRawData(year).then(function(result) {
+        var goalsAllowed = [];
+        JSON.stringify(result);
+        result.forEach(function(item, index) {
+          if (item.GA > 0) {
+            goalsAllowed.push(item);
+          }
+        });
+        return generalSort(goalsAllowed, "GA");
+      }, function(result) {
+        console.log("error:" + result);
+      });
+    },
     getFoulsCommitted: function(year) {
       return getRawData(year).then(function(result) {
         var foulsCommitted = [];

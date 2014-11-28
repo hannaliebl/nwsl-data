@@ -41,7 +41,7 @@
   }
 }
 
-#goalscorers, #goalproductivity, #foulscommitted, #yellowcards, #redcards {
+#goalscorers, #goalproductivity, #foulscommitted, #yellowcards, #redcards, #saves, #goalsallowed, #goalsallowedpergame {
   position: relative;
 }
 
@@ -70,7 +70,7 @@ rect {
   stroke-width: 1px;
 }
 
-#goalscorers svg, #goalproductivity svg, #yellowcards svg, #redcards svg {
+#goalscorers svg, #goalproductivity svg, #yellowcards svg, #redcards svg, #saves svg, #foulscommitted svg, #goalsallowed svg, #goalsallowedpergame svg {
   text {
     font-size: 0.7rem;
     fill: #555;
@@ -103,7 +103,7 @@ rect {
 //    border: 4px solid #ddd;
 // }
 
-#goalproductivity rect.bar, #goalscorers rect.bar, #foulscommitted rect.bar, #yellowcards rect.bar, #redcards rect.bar {
+#goalproductivity rect.bar, #goalscorers rect.bar, #foulscommitted rect.bar, #yellowcards rect.bar, #redcards rect.bar, #saves rect.bar, #goalsallowed rect.bar, #goalsallowedpergame rect.bar {
   &:hover {
     cursor: pointer;
   }
