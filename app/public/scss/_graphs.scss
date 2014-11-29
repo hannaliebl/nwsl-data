@@ -75,15 +75,20 @@ rect {
     font-size: 0.7rem;
     fill: #555;
   }
+}
+
+#foulscommitted svg {
+  text {
+    font-size: 0.4rem;
+    fill: #555;
+  }
+  rect {
+stroke-width: 0.3px;
+}
   path.domain {
     fill: rgba(0,0,0,0);
     stroke: #555;
   }
-}
-
-#foulscommitted svg text {
-  font-size: 0.3rem;
-  fill: #555;
 }
 
 .tick line {

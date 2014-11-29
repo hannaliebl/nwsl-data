@@ -23,7 +23,6 @@ nwslData
     templateUrl: '/js/directives/templates/stackedbargraphtemplate.html',
     link: function (scope, element, attrs) {
       nwslDataService.offFrameShots("2014").then(function (data) {
-        console.log(data);
         var margin = {top: 20, right: 15, bottom: 120, left: 40},
           width = 950 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
@@ -72,7 +71,7 @@ nwslData
               stroke: "#C32033",
               fill: "#C32033"
             },
-          "rochester": {
+          "western ny": {
               stroke: "#FBEE01",
               fill: "#FBEE01"
             },
@@ -127,15 +126,15 @@ nwslData
           data.forEach(function(d) {
             var y0 = 0;
             //d.allShots = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
-            d.allShots = [{name: "Shots on Goal", y0: 0, y1: d.SOG, team: d.team}, {name: "Off Target Shofts", y0: d.SOG, y1: d.offFrameShots, team: d.team}];
+            d.allShots = [{name: "Shots on Goal", y0: 0, y1: d.SOG, team: d.team}, {name: "Off Target Shofts", y0: d.SOG, y1: d.SH, team: d.team}];
             d.total = d.SH;
-            console.log("d in foreach", d);
           });
 
           data.sort(function(a, b) { return b.team - a.team; });
+          console.log(data);
 
           x.domain(data.map(function(d) { return d.NAME; }));
-          y.domain([0, d3.max(data, function(d) { return 70; })]);
+          y.domain([0, d3.max(data, function(d) { return d.SH; })]);
           
           xAxisG
             .transition()
@@ -170,9 +169,7 @@ nwslData
             .data(function(d) {return d.allShots; })
           .enter().append("rect")
             .attr("width", x.rangeBand())
-            .attr("y", function(d) { 
-              console.log("d in y func", d);
-              console.log("y in y func", y(d.y1));
+            .attr("y", function(d) {
               return y(d.y1); })
             .attr("height", function(d) { return Math.abs(y(d.y0) - y(d.y1)); })
             .attr("fill", function(d) {
