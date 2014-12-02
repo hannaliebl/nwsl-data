@@ -41,7 +41,7 @@
   }
 }
 
-#goalscorers, #goalproductivity, #foulscommitted, #yellowcards, #redcards, #saves, #goalsallowed, #goalsallowedpergame {
+#goalscorers, #goalproductivity, #foulscommitted, #yellowcards, #redcards, #saves, #goalsallowed, #goalsallowedpergame, #shots-stacked {
   position: relative;
 }
 
@@ -70,7 +70,7 @@ rect {
   stroke-width: 1px;
 }
 
-#goalscorers svg, #goalproductivity svg, #yellowcards svg, #redcards svg, #saves svg, #foulscommitted svg, #goalsallowed svg, #goalsallowedpergame svg {
+#goalscorers svg, #goalproductivity svg, #yellowcards svg, #redcards svg, #saves svg, #foulscommitted svg, #goalsallowed svg, #goalsallowedpergame svg, #shots-stacked svg {
   text {
     font-size: 0.7rem;
     fill: #555;
@@ -104,11 +104,7 @@ stroke-width: 0.3px;
   shape-rendering: crispEdges;
 }
 
-// #goalscorers, #goalproductivity, #foulscommitted, #yellowcards, #redcards {
-//    border: 4px solid #ddd;
-// }
-
-#goalproductivity rect.bar, #goalscorers rect.bar, #foulscommitted rect.bar, #yellowcards rect.bar, #redcards rect.bar, #saves rect.bar, #goalsallowed rect.bar, #goalsallowedpergame rect.bar {
+#goalproductivity rect.bar, #goalscorers rect.bar, #foulscommitted rect.bar, #yellowcards rect.bar, #redcards rect.bar, #saves rect.bar, #goalsallowed rect.bar, #goalsallowedpergame rect.bar, #shots-stacked g.bar {
   &:hover {
     cursor: pointer;
   }
