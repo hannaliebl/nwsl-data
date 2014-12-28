@@ -161,7 +161,7 @@ nwslData
 
           yLabel
             .transition()
-            .duration(500)
+            .duration(500);
 
           var bars = chart.selectAll(".bar")
             .data(data, function(d) {return d[scope.scalex];});
@@ -228,7 +228,7 @@ nwslData
                 filterData.push(elem);
               }
               return filterData;
-            })
+            });
 
             update(filterData);
             scope.cityName = teamBackgrounds[team];
