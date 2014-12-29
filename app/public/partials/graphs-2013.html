@@ -16,6 +16,11 @@
         </bargraph>
       </div>
     </div>
+    <div ng-controller="Graphs2013Ctrl">
+      <div class="graph-container">
+        <stacked-bargraph source="offFrameShots" title="Total Shots and Shots on Goal" year="2013" scalex="NAME" scaley="SH" svg-id="shots-stacked" hover-text="Total Shots:" hover-text2="Shots on Goal:" labely="Shots" city-name="all" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Total Shots"></stacked-bargraph>
+      </div>
+    </div>
   </section>
   <section class="graph-group">
     <h1 class="group-label">Fouls/Cards</h1>

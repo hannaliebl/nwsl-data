@@ -104,7 +104,7 @@ stroke-width: 0.3px;
   shape-rendering: crispEdges;
 }
 
-#goalproductivity rect.bar, #goalscorers rect.bar, #foulscommitted rect.bar, #yellowcards rect.bar, #redcards rect.bar, #saves rect.bar, #goalsallowed rect.bar, #goalsallowedpergame rect.bar, #shots-stacked g.bar {
+#goalproductivity rect.bar, #goalscorers rect.bar, #foulscommitted rect.bar, #yellowcards rect.bar, #redcards rect.bar, #saves rect.bar, #goalsallowed rect.bar, #goalsallowedpergame rect.bar, #shots-stacked g.players {
   &:hover {
     cursor: pointer;
   }
