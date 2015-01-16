@@ -210,6 +210,9 @@ nwslData
             var transition = chart.transition().duration(250),
               delay = function(d, i) { return i * 10; };
 
+            transition.selectAll(".players")
+              .delay(delay)
+              .attr("transform", function(d) { return "translate(" + x(d[attrs.scalex]) + ",0)"; });
             transition.selectAll(".bar")
               .delay(delay)
               .attr("x", function(d) { return x0(d[attrs.scalex]); });
@@ -242,6 +245,9 @@ nwslData
             var transition = chart.transition().duration(250),
             delay = function(d, i) { return i * 10; };
 
+            transition.selectAll(".players")
+              .delay(delay)
+              .attr("transform", function(d) { return "translate(" + x(d[attrs.scalex]) + ",0)"; });
             transition.selectAll(".bar")
               .delay(delay)
               .attr("x", function(d) { return x0(d[attrs.scalex]); });
