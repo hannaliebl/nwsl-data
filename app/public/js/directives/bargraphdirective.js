@@ -67,7 +67,7 @@ nwslData
 
           x.domain(data.map(function(d) { return d[scope.scalex]; }));
           y.domain([0, d3.max(data, function(d) { return d[scope.scaley]; })]);
-          
+
           xAxisG
             .transition()
             .duration(500)
@@ -167,10 +167,15 @@ nwslData
 
         var sortOrder = true;
         scope.sort = function() {
+
+          var transition = chart.transition().duration(250),
+            delay = function(d, i) { return i * 10; };
+
           sortOrder = !sortOrder;
+
           if (!sortOrder) {
           scope.sortText = "Sort by Teams";
-          var x0 = x.domain(data.sort(function(a, b) { 
+          var x0 = x.domain(data.sort(function(a, b) {
             if (a[scope.scaley] === b[scope.scaley]) {
             if (a.team > b.team) return 1;
             if (a.team < b.team) return -1;
@@ -178,13 +183,10 @@ nwslData
           }
           if (a[scope.scaley] > b[scope.scaley]) return -1;
           if (a[scope.scaley] < b[scope.scaley]) return 1;
-            return 0; 
+            return 0;
           })
             .map(function(d) { return d[scope.scalex]; }))
             .copy();
-
-          var transition = chart.transition().duration(250),
-            delay = function(d, i) { return i * 10; };
 
           transition.selectAll(".bar")
             .delay(delay)
@@ -202,7 +204,7 @@ nwslData
             .delay(delay);
           } else {
             scope.sortText = orig;
-            var x0 = x.domain(data.sort(function(a,b) {
+            var x1 = x.domain(data.sort(function(a,b) {
               if (a.team === b.team) {
                 if (a[scope.scaley] > b[scope.scaley]) return -1;
                 if (a[scope.scaley] < b[scope.scaley]) return 1;
@@ -215,12 +217,9 @@ nwslData
             .map(function(d) { return d[scope.scalex]; }))
             .copy();
 
-            var transition = chart.transition().duration(250),
-            delay = function(d, i) { return i * 10; };
-
           transition.selectAll(".bar")
             .delay(delay)
-            .attr("x", function(d) { return x0(d[scope.scalex]); });
+            .attr("x", function(d) { return x1(d[scope.scalex]); });
           transition.select(".x.axis")
             .call(xAxis)
             .selectAll("text")

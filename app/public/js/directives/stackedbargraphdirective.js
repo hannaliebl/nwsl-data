@@ -59,7 +59,7 @@ nwslData
             .attr("transform", "rotate(-90)")
             .text(attrs.labely);
 
-        function update (data) { 
+        function update (data) {
           data.forEach(function(d) {
             var y0 = 0;
             d.allShots = [{player: d.NAME, name: "Shots on Goal", y0: 0, y1: d.SOG, team: d.team, totalShots: d.SH, shotsOnGoal: d.SOG}, {player: d.NAME, name: "Off Target Shots", y0: d.SOG, y1: d.SH, team: d.team, totalShots: d.SH, shotsOnGoal: d.SOG}];
@@ -67,7 +67,7 @@ nwslData
 
           x.domain(data.map(function(d) { return d[attrs.scalex]; }));
           y.domain([0, d3.max(data, function(d) { return d[attrs.scaley]; })]);
-          
+
           xAxisG
             .transition()
             .duration(500)
@@ -98,7 +98,7 @@ nwslData
             .duration(500)
             .attr("class", "players")
             .attr("transform", function(d) { return "translate(" + x(d[attrs.scalex]) + ",0)"; });
-              
+
           players.enter()
             .append("g")
             .attr("class", "players")
@@ -129,7 +129,7 @@ nwslData
               } else {
                 return barGraphAppearance().teamColors[d.team].fill;
               }
-            })
+            });
 
           bars.enter()
             .append("rect")
@@ -191,10 +191,12 @@ nwslData
 
         var sortOrder = true;
         scope.sort = function() {
+          var transition = chart.transition().duration(250),
+            delay = function(d, i) { return i * 10; };
           sortOrder = !sortOrder;
           if (!sortOrder) {
             scope.sortText = "Sort by Teams";
-            var x0 = x.domain(data.sort(function(a, b) { 
+            var x0 = x.domain(data.sort(function(a, b) {
               if (a[attrs.scaley] === b[attrs.scaley]) {
               if (a.team > b.team) return 1;
               if (a.team < b.team) return -1;
@@ -202,13 +204,10 @@ nwslData
             }
             if (a[attrs.scaley] > b[attrs.scaley]) return -1;
             if (a[attrs.scaley] < b[attrs.scaley]) return 1;
-              return 0; 
+              return 0;
             })
               .map(function(d) { return d[attrs.scalex]; }))
               .copy();
-
-            var transition = chart.transition().duration(250),
-              delay = function(d, i) { return i * 10; };
 
             transition.selectAll(".players")
               .delay(delay)
@@ -229,7 +228,7 @@ nwslData
               .delay(delay);
           } else {
             scope.sortText = orig;
-            var x0 = x.domain(data.sort(function(a,b) {
+            var x1 = x.domain(data.sort(function(a, b) {
               if (a.team === b.team) {
                 if (a[attrs.scaley] > b[attrs.scaley]) return -1;
                 if (a[attrs.scaley] < b[attrs.scaley]) return 1;
@@ -242,15 +241,12 @@ nwslData
             .map(function(d) { return d[attrs.scalex]; }))
             .copy();
 
-            var transition = chart.transition().duration(250),
-            delay = function(d, i) { return i * 10; };
-
             transition.selectAll(".players")
               .delay(delay)
               .attr("transform", function(d) { return "translate(" + x(d[attrs.scalex]) + ",0)"; });
             transition.selectAll(".bar")
               .delay(delay)
-              .attr("x", function(d) { return x0(d[attrs.scalex]); });
+              .attr("x", function(d) { return x1(d[attrs.scalex]); });
             transition.select(".x.axis")
               .call(xAxis)
               .selectAll("text")
