@@ -36,8 +36,8 @@ nwslData
     },
     teamColors: {
       "boston": {
-          stroke: "#004890",
-          fill: "#004890"
+          stroke: "#0265FD",
+          fill: "#0265FD"
         },
       "chicago": {
           stroke: "#1BB6EC",
@@ -52,12 +52,12 @@ nwslData
           fill: "#113B2D"
         },
       "seattle": {
-          stroke: "#949DA4",
-          fill: "#949DA4"
+          stroke: "#25354C",
+          fill: "#25354C"
         },
       "new jersey": {
-          stroke: "#56077A",
-          fill: "#56077A"
+          stroke: "#0C437C",
+          fill: "#0C437C"
         },
       "washington dc": {
           stroke: "#C32033",
