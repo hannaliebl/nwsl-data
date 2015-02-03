@@ -1,6 +1,18 @@
 nwslData
-.controller('GraphsCtrl', function($scope, $timeout, nwslDataService) {
+.controller('GraphsCtrl', function($scope, $timeout, getDataService, nwslDataService, graphDataService) {
   'use strict';
+
+  $scope.goalScorers = [];
+
+  $scope.graphData = graphDataService.data;
+
+  $scope.$watch('graphData', function(newVal) {
+    $scope.rawData = newVal.rawData;
+    $scope.goalScorers = newVal.goalScorers;
+    $scope.teams = newVal.teams;
+    console.log(newVal);
+  });
+
   $scope.test = [1, 2];
   nwslDataService.getTeams(2014).then(function(data) {
     $scope.cities = data;
@@ -14,4 +26,6 @@ nwslData
     $scope.show = false;
     $scope.details = null;
   };
+
+  getDataService.getRawData(2014);
 });

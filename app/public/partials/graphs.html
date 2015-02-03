@@ -6,7 +6,7 @@
     <h1 class="group-label">Goalscorers</h1>
     <div ng-controller="GraphsCtrl">
       <div class="graph-container">
-        <bargraph source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
+        <bargraph data="goalScorers" source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
         </bargraph>
       </div>
     </div>
