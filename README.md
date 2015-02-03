@@ -1,7 +1,7 @@
 NWSL Data Visualizations Site ⚽
 =========
 
-Graphs/data visualizations relating to the National Women's Soccer League, running on Angular, D3, and Express.
+Graphs/data visualizations relating to the [National Women's Soccer League](http://www.nwslsoccer.com/index.html), running on Angular, D3, and Express.
 
 Dependencies
 ----
