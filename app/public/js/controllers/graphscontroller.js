@@ -4,13 +4,13 @@ nwslData
 
   $scope.goalScorers = [];
 
-  $scope.graphData = graphDataService.data;
+  $scope.graphData = graphDataService.realData;
 
   $scope.$watch('graphData', function(newVal) {
     $scope.rawData = newVal.rawData;
     $scope.goalScorers = newVal.goalScorers;
     $scope.teams = newVal.teams;
-    console.log(newVal);
+    console.log('newval',newVal);
   });
 
   $scope.test = [1, 2];
@@ -27,5 +27,5 @@ nwslData
     $scope.details = null;
   };
 
-  getDataService.getRawData(2014);
+  graphDataService.fetchData('2014');
 });

@@ -12,7 +12,7 @@ nwslData
         }).error(function () {
           deferred.reject('Could not load raw NWSL data.');
         });
-
+        
       return deferred.promise;
     }
   };

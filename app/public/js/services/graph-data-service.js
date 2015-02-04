@@ -17,6 +17,7 @@ nwslData
   };
 
   var getRidOfNonGoalScorers = function(data) {
+    var goalScorers = [];
     data.forEach(function(item, index) {
       if (item.G > 0) {
         goalScorers.push(item);
@@ -27,8 +28,8 @@ nwslData
 
   var getTeams = function(data) {
     var allTeams = [];
-    for (var i = 0; i < result.length; i++) {
-      allTeams.push(result[i].team);
+    for (var i = 0; i < data.length; i++) {
+      allTeams.push(data[i].team);
     }
     var uniqueTeams = allTeams.filter(function(value, i, arr) {
       return i === arr.indexOf(value);
@@ -36,7 +37,7 @@ nwslData
     return uniqueTeams;
   };
 
-  var data = {
+  var realData = {
     rawData: [],
     goalScorers: [],
     teams: [],
@@ -44,15 +45,17 @@ nwslData
   };
 
   return {
-    data: data,
+    realData: realData,
     fetchData: function(year) {
-      data.loading = true;
+      console.log('this', this)
+      realData.loading = true;
       getDataService.getRawData(year).then(function(response) {
-        JSON.stringify(result);
-        data.rawData = response;
-        data.goalScorers = getRidOfNonGoalScorers(year);
-        data.teams = getTeams();
-        data.loading = false;
+        JSON.stringify(response);
+        realData.rawData = response;
+        realData.goalScorers = getRidOfNonGoalScorers(realData.rawData);
+        realData.teams = getTeams(response);
+        realData.loading = false;
+        return realData;
       });
     }
   };
