@@ -5,6 +5,7 @@ nwslData
     restrict: "AE",
     scope: {
       data: '=',
+      loading: '=',
       source: "@",
       scalex: "@",
       scaley: "@",
@@ -37,12 +38,11 @@ nwslData
       var y = d3.scale.linear()
         .range([height, 0]);
 
-      var chart = d3.select("#"+scope.svgId).append("svg")
+      var chart = d3.select(element[0].querySelector('.bargraph-svg-container')).append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
       var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom");
@@ -67,7 +67,6 @@ nwslData
           .text(scope.labely);
 
       function update (data) {
-
         x.domain(data.map(function(d) { return d[scope.scalex]; }));
         y.domain([0, d3.max(data, function(d) { return d[scope.scaley]; })]);
 
@@ -150,11 +149,11 @@ nwslData
       scope.cityName = barGraphAppearance().teamBackgrounds.all;
       scope.team = function(team) {
         if (team === "all") {
-          update(data);
+          update(scope.data);
           scope.cityName = barGraphAppearance().teamBackgrounds.all;
         } else {
           var filterData = [];
-          data.forEach(function(elem) {
+          scope.data.forEach(function(elem) {
             if (elem.team === team) {
               filterData.push(elem);
             }
@@ -178,7 +177,7 @@ nwslData
 
         if (!sortOrder) {
         scope.sortText = "Sort by Teams";
-        var x0 = x.domain(data.sort(function(a, b) {
+        var x0 = x.domain(scope.data.sort(function(a, b) {
           if (a[scope.scaley] === b[scope.scaley]) {
           if (a.team > b.team) return 1;
           if (a.team < b.team) return -1;
@@ -207,7 +206,7 @@ nwslData
           .delay(delay);
         } else {
           scope.sortText = orig;
-          var x1 = x.domain(data.sort(function(a,b) {
+          var x1 = x.domain(scope.data.sort(function(a,b) {
             if (a.team === b.team) {
               if (a[scope.scaley] > b[scope.scaley]) return -1;
               if (a[scope.scaley] < b[scope.scaley]) return 1;
@@ -236,6 +235,9 @@ nwslData
           .delay(delay);
         }
       };
+      scope.$watch('data', function (newVal) {
+        update(newVal)
+      });
     }
   };
 });
