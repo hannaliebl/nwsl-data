@@ -37,25 +37,22 @@ nwslData
     return uniqueTeams;
   };
 
-  var realData = {
-    rawData: [],
-    goalScorers: [],
-    teams: [],
-    loading: true
-  };
-
   return {
-    realData: realData,
+    data: {
+      rawData: [],
+      goalScorers: [],
+      teams: [],
+      loading: true
+    },
     fetchData: function(year) {
-      console.log('this', this)
-      realData.loading = true;
+      var that = this;
+      that.data.loading = true;
       getDataService.getRawData(year).then(function(response) {
         JSON.stringify(response);
-        realData.rawData = response;
-        realData.goalScorers = getRidOfNonGoalScorers(realData.rawData);
-        realData.teams = getTeams(response);
-        realData.loading = false;
-        return realData;
+        that.data.rawData = response;
+        that.data.goalScorers = getRidOfNonGoalScorers(that.data.rawData);
+        that.data.teams = getTeams(response);
+        that.data.loading = false;
       });
     }
   };

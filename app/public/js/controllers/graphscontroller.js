@@ -2,16 +2,17 @@ nwslData
 .controller('GraphsCtrl', function($scope, $timeout, getDataService, nwslDataService, graphDataService) {
   'use strict';
 
-  $scope.goalScorers = [];
+  $scope.goalScorers;
+  $scope.loading = true;
 
-  $scope.graphData = graphDataService.realData;
+  $scope.graphData = graphDataService.data;
 
   $scope.$watch('graphData', function(newVal) {
     $scope.rawData = newVal.rawData;
     $scope.goalScorers = newVal.goalScorers;
     $scope.teams = newVal.teams;
-    console.log('newval',newVal);
-  });
+    $scope.loading = newVal.loading;
+  }, true);
 
   $scope.test = [1, 2];
   nwslDataService.getTeams(2014).then(function(data) {
