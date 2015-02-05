@@ -6,11 +6,11 @@
     <h1 class="group-label">Goalscorers</h1>
     <div ng-controller="GraphsCtrl">
       <div class="graph-container">
-        <bargraph data="goalScorers" source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
+        <bargraph data="goalScorers" loading="loading" source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
         </bargraph>
       </div>
     </div>
-    <div ng-controller="GraphsCtrl">
+<!--     <div ng-controller="GraphsCtrl">
       <div class="graph-container">
         <bargraph source="getGoalsPerHr" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals per Hour:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals per Hour">
         </bargraph>
@@ -112,6 +112,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </section>
 </div>
