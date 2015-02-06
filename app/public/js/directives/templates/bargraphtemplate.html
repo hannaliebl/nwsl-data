@@ -24,8 +24,8 @@
   </div>
   <div id="{{svgId}}" class="bargraph-svg-container" style="background: url('img/{{cityName.img}}') 50% 20% no-repeat;">
     <div class="hover-label" ng-class="{ 'active' : show }">
-      <h1>{{$parent.details.NAME}}</h1>
-      <span>{{hoverText}} {{$parent.details[scaley]}}, </span><span>Team: {{$parent.details.team | uppercase}}</span>
+      <h1>{{details.item.NAME}}</h1>
+      <span>{{hoverText}} {{details.item[scaley]}}, </span><span>Team: {{details.item.team | uppercase}}</span>
     </div>
   </div>
 </div>

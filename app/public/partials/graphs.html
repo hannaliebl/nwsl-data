@@ -4,11 +4,13 @@
   <p>FC Kansas City were the league champions, out of nine total teams. They defeated Seattle Reign FC in the final 2-1. Portland Thorns FC and Washington Spirit also made it to the postseason.</p>
   <section class="graph-group">
     <h1 class="group-label">Goalscorers</h1>
-    <div ng-controller="GraphsCtrl">
-      <div class="graph-container">
-        <bargraph data="goalScorers" loading="loading" source="getRidOfZeroes" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" year="2014" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Goals">
-        </bargraph>
-      </div>
+    <div class="graph-container">
+      <bargraph data="goalScorers" loading="loading" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" showteams="true" sort-text="Sort by Goals">
+      </bargraph>
+    </div>
+    <div class="graph-container">
+      <bargraph data="goalsPerHr" loading="loading" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals Per Hour:" city-name="all" showteams="true" sort-text="Sort by Goals Per Hour">
+      </bargraph>
     </div>
 <!--     <div ng-controller="GraphsCtrl">
       <div class="graph-container">

@@ -4,7 +4,7 @@ var nwslData = angular.module("nwslData", ["ngRoute", "ngAnimate"])
     $routeProvider
       .when("/", {
         templateUrl: "./partials/graphs.html",
-        controller:"2014Ctrl"
+        controller:"GraphsCtrl"
       })
       .when("/2013", {
         templateUrl: "./partials/graphs-2013.html",

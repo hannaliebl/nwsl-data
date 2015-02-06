@@ -6,26 +6,27 @@ nwslData
     scope: {
       data: '=',
       loading: '=',
-      source: "@",
       scalex: "@",
       scaley: "@",
       svgId: "@",
-      labelx: "@",
-      labely: "@",
-      team: "&",
-      hover: '&',
-      hoverLeave: '&',
-      sort: '&',
-      year: "=",
       title: "@",
       hoverText: "@",
+      showteams: "@",
       sortText: "@",
-      show: "=",
-      showteams: "@"
+      team: "&",
+      sort: '&',
     },
     templateUrl: '/js/directives/templates/bargraphtemplate.html',
     controller: function ($scope) {
-      
+      $scope.show = false;
+      $scope.showDetail = function (item) {
+        $scope.show = true;
+        $scope.details = item;
+      };
+      $scope.hideDetail = function (item) {
+        $scope.show = false;
+        $scope.details = null;
+      };
     },
     link: function (scope, element, attrs) {
       var margin = {top: 20, right: 15, bottom: 120, left: 40},
@@ -64,7 +65,7 @@ nwslData
           .attr("y", -30)
           .attr("x", -220)
           .attr("transform", "rotate(-90)")
-          .text(scope.labely);
+          .text(attrs.labely);
 
       function update (data) {
         x.domain(data.map(function(d) { return d[scope.scalex]; }));
@@ -120,10 +121,10 @@ nwslData
           .attr("height", 0)
           .style("opacity", 0)
           .on('mouseover', function(d,i) {
-            scope.$apply(scope.hover({item: d}));
+            scope.$apply(scope.showDetail({item: d}));
           })
           .on('mouseleave', function(d,i) {
-            scope.$apply(scope.hoverLeave({item: d}));
+            scope.$apply(scope.hideDetail({item: d}));
           })
           .attr("fill", function(d) {
             return barGraphAppearance().teamColors[d.team].fill;
@@ -236,7 +237,7 @@ nwslData
         }
       };
       scope.$watch('data', function (newVal) {
-        update(newVal)
+        update(newVal);
       });
     }
   };
