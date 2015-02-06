@@ -37,22 +37,34 @@ nwslData
     return uniqueTeams;
   };
 
+  var getGoalsPerHr = function(data) {
+    var _goalScorers = getRidOfNonGoalScorers(data);
+    for (var i = 0; i < _goalScorers.length; i++) {
+      var productivity = ((_goalScorers[i].G/_goalScorers[i].MP) * 60).toFixed(3);
+      _goalScorers[i].goalsPerHr = productivity;
+    }
+    return generalSort(_goalScorers, "goalsPerHr");
+  };
+
+  var data = {
+    rawData: [],
+    goalScorers: [],
+    teams: [],
+    goalsPerHr: [],
+    loading: true
+  };
+
   return {
-    data: {
-      rawData: [],
-      goalScorers: [],
-      teams: [],
-      loading: true
-    },
+    data: data,
     fetchData: function(year) {
-      var that = this;
-      that.data.loading = true;
+      data.loading = true;
       getDataService.getRawData(year).then(function(response) {
         JSON.stringify(response);
-        that.data.rawData = response;
-        that.data.goalScorers = getRidOfNonGoalScorers(that.data.rawData);
-        that.data.teams = getTeams(response);
-        that.data.loading = false;
+        data.rawData = response;
+        data.goalScorers = getRidOfNonGoalScorers(data.rawData);
+        data.teams = getTeams(response);
+        data.goalsPerHr = getGoalsPerHr(response);
+        data.loading = false;
       });
     }
   };
