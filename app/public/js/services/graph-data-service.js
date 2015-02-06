@@ -46,11 +46,71 @@ nwslData
     return generalSort(_goalScorers, "goalsPerHr");
   };
 
+  var getGoalsAllowedPerGame = function(data) {
+    var saves = [];
+    JSON.stringify(data);
+    data.forEach(function(item, index) {
+      if (item.GAGM > 0) {
+        saves.push(item);
+      }
+    });
+    return generalSort(saves, "GAGM");
+  };
+
+  var getSaves = function(data) {
+    var saves = [];
+    JSON.stringify(data);
+    data.forEach(function(item, index) {
+      if (item.SV > 0) {
+        saves.push(item);
+      }
+    });
+    return generalSort(saves, "SV");
+  };
+
+  var getGoalsAllowed = function(data) {
+    var goalsAllowed = [];
+    JSON.stringify(data);
+    data.forEach(function(item, index) {
+      if (item.GA > 0) {
+        goalsAllowed.push(item);
+      }
+    });
+    return generalSort(goalsAllowed, "GA");
+  };
+
+  var getFoulsCommitted = function(data) {
+    var foulsCommitted = [];
+    JSON.stringify(data);
+    data.forEach(function(item, index) {
+      if (item.FC > 0) {
+        foulsCommitted.push(item);
+      }
+    });
+    return generalSort(foulsCommitted, "FC");
+  };
+
+  var getYellowCards = function(data) {
+    var yellowCards = [];
+    JSON.stringify(data);
+    data.forEach(function(item, index) {
+      if (item.YC > 0) {
+        yellowCards.push(item);
+      }
+    });
+    return generalSort(yellowCards, "YC");
+  };
+
   var data = {
     rawData: [],
     goalScorers: [],
     teams: [],
     goalsPerHr: [],
+    goalsAllowedPerGame: [],
+    saves: [],
+    goalsAllowed: [],
+    totalFouls: [],
+    yellowCards: [],
     loading: true
   };
 
@@ -64,6 +124,11 @@ nwslData
         data.goalScorers = getRidOfNonGoalScorers(data.rawData);
         data.teams = getTeams(response);
         data.goalsPerHr = getGoalsPerHr(response);
+        data.goalsAllowedPerGame = getGoalsAllowedPerGame(response);
+        data.saves = getSaves(response);
+        data.goalsAllowed = getGoalsAllowed(response);
+        data.totalFouls = getFoulsCommitted(response);
+        data.yellowCards = getYellowCards(response);
         data.loading = false;
       });
     }

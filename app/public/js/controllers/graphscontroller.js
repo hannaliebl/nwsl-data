@@ -12,22 +12,13 @@ nwslData
     $scope.goalScorers = newVal.goalScorers;
     $scope.cities = newVal.teams;
     $scope.goalsPerHr = newVal.goalsPerHr;
+    $scope.goalsAllowedPerGame = newVal.goalsAllowedPerGame;
+    $scope.saves = newVal.saves;
+    $scope.goalsAllowed = newVal.goalsAllowed;
+    $scope.totalFouls = newVal.totalFouls;
+    $scope.yellowCards = newVal.yellowCards;
     $scope.loading = newVal.loading;
   }, true);
-
-  $scope.test = [1, 2];
-  // nwslDataService.getTeams(2014).then(function(data) {
-  //   $scope.cities = data;
-  // });
-  // $scope.show = false;
-  // $scope.showDetail = function (item) {
-  //   $scope.show = true;
-  //   $scope.details = item;
-  // };
-  // $scope.hideDetail = function (item) {
-  //   $scope.show = false;
-  //   $scope.details = null;
-  // };
 
   graphDataService.fetchData('2014');
 });
