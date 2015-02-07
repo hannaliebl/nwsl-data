@@ -1,5 +1,5 @@
-[  
-   {  
+[
+   {
       "NAME":"Jazmyne Avant",
       "team":"boston",
       "GP":11,
@@ -18,7 +18,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jo Dragotta",
       "team":"boston",
       "GP":10,
@@ -37,7 +37,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Maddy Evans",
       "team":"boston",
       "GP":11,
@@ -56,7 +56,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Elizabeth Guess",
       "team":"boston",
       "GP":1,
@@ -75,7 +75,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kate Howarth",
       "team":"boston",
       "GP":4,
@@ -94,7 +94,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Julie King",
       "team":"boston",
       "GP":21,
@@ -113,7 +113,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Adriana Leon",
       "team":"boston",
       "GP":6,
@@ -132,7 +132,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Sydney Leroux",
       "team":"boston",
       "GP":19,
@@ -151,7 +151,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Joanna Lohman",
       "team":"boston",
       "GP":22,
@@ -170,7 +170,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kia McNeill",
       "team":"boston",
       "GP":21,
@@ -189,7 +189,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Melinda Mercado",
       "team":"boston",
       "GP":1,
@@ -208,7 +208,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Carmelina Moscato",
       "team":"boston",
       "GP":5,
@@ -227,7 +227,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Mariah Nogueira",
       "team":"boston",
       "GP":20,
@@ -246,7 +246,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Heather O'Reilly",
       "team":"boston",
       "GP":20,
@@ -265,7 +265,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lianne Sanderson",
       "team":"boston",
       "GP":22,
@@ -284,7 +284,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Katie Schoepfer",
       "team":"boston",
       "GP":20,
@@ -303,7 +303,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kyah Simon",
       "team":"boston",
       "GP":17,
@@ -322,7 +322,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Cat Whitehill",
       "team":"boston",
       "GP":22,
@@ -341,7 +341,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Rhian Wilkinson",
       "team":"boston",
       "GP":14,
@@ -360,7 +360,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lisa-Marie Woods",
       "team":"boston",
       "GP":4,
@@ -379,7 +379,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Shannon Boxx",
       "team":"chicago",
       "GP":2,
@@ -398,7 +398,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Zakiya Bywaters",
       "team":"chicago",
       "GP":6,
@@ -417,7 +417,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lori Chalupny",
       "team":"chicago",
       "GP":18,
@@ -436,7 +436,7 @@
       "YC":3,
       "RC":0
    },
-   {  
+   {
       "NAME":"Maribel Dominguez",
       "team":"chicago",
       "GP":16,
@@ -455,7 +455,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lauren Fowlkes",
       "team":"chicago",
       "GP":4,
@@ -474,7 +474,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Sonja Fuss",
       "team":"chicago",
       "GP":16,
@@ -493,7 +493,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Dinora Garza",
       "team":"chicago",
       "GP":2,
@@ -512,7 +512,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Inka Grings",
       "team":"chicago",
       "GP":16,
@@ -531,7 +531,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Taryn Hemmings",
       "team":"chicago",
       "GP":14,
@@ -550,7 +550,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jen Hoy",
       "team":"chicago",
       "GP":9,
@@ -569,7 +569,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Adriana Leon",
       "team":"chicago",
       "GP":10,
@@ -588,7 +588,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Ella Masar",
       "team":"chicago",
       "GP":20,
@@ -607,7 +607,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Alyssa Mautz",
       "team":"chicago",
       "GP":18,
@@ -626,7 +626,7 @@
       "YC":3,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jessica McDonald",
       "team":"chicago",
       "GP":9,
@@ -645,7 +645,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Carmelina Moscato",
       "team":"chicago",
       "GP":5,
@@ -664,7 +664,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Leslie Osborne",
       "team":"chicago",
       "GP":18,
@@ -683,7 +683,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Rachel Quon",
       "team":"chicago",
       "GP":19,
@@ -702,7 +702,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jackie Santacaterina",
       "team":"chicago",
       "GP":18,
@@ -721,7 +721,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Julianne Sitch",
       "team":"chicago",
       "GP":20,
@@ -740,7 +740,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lydia Vandenbergh",
       "team":"chicago",
       "GP":17,
@@ -759,7 +759,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Michelle Wenino",
       "team":"chicago",
       "GP":18,
@@ -778,7 +778,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jen Buczkowski",
       "team":"kansas city",
       "GP":22,
@@ -797,7 +797,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tiffany Cameron",
       "team":"kansas city",
       "GP":1,
@@ -816,7 +816,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Renae Cuellar",
       "team":"kansas city",
       "GP":11,
@@ -835,7 +835,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Sinead Farrelly",
       "team":"kansas city",
       "GP":16,
@@ -854,7 +854,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jaime French",
       "team":"kansas city",
       "GP":1,
@@ -873,7 +873,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Missy Geha",
       "team":"kansas city",
       "GP":1,
@@ -892,7 +892,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Melissa Henderson",
       "team":"kansas city",
       "GP":17,
@@ -911,7 +911,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lauren Holiday",
       "team":"kansas city",
       "GP":18,
@@ -930,7 +930,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Courtney Jones",
       "team":"kansas city",
       "GP":22,
@@ -949,7 +949,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Katie Kelly",
       "team":"kansas city",
       "GP":7,
@@ -968,7 +968,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Casey Loyd",
       "team":"kansas city",
       "GP":4,
@@ -987,7 +987,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Merritt Mathias",
       "team":"kansas city",
       "GP":22,
@@ -1006,7 +1006,7 @@
       "YC":3,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kristie Mewis",
       "team":"kansas city",
       "GP":20,
@@ -1025,7 +1025,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Natalie Norris",
       "team":"kansas city",
       "GP":1,
@@ -1044,7 +1044,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Teresa Noyola",
       "team":"kansas city",
       "GP":7,
@@ -1063,7 +1063,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Leigh Ann Robinson",
       "team":"kansas city",
       "GP":22,
@@ -1082,7 +1082,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Becky Sauerbrunn",
       "team":"kansas city",
       "GP":19,
@@ -1101,7 +1101,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Desiree Scott",
       "team":"kansas city",
       "GP":20,
@@ -1120,7 +1120,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lauren Sesselmann",
       "team":"kansas city",
       "GP":19,
@@ -1139,7 +1139,7 @@
       "YC":3,
       "RC":1
    },
-   {  
+   {
       "NAME":"Erika Tymrak",
       "team":"kansas city",
       "GP":21,
@@ -1158,7 +1158,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Nia Williams",
       "team":"kansas city",
       "GP":4,
@@ -1177,7 +1177,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jazmyne Avant",
       "team":"portland",
       "GP":4,
@@ -1196,7 +1196,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Rachel Buehler",
       "team":"portland",
       "GP":20,
@@ -1215,7 +1215,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Marian Dougherty",
       "team":"portland",
       "GP":19,
@@ -1234,7 +1234,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Becky Edwards",
       "team":"portland",
       "GP":10,
@@ -1253,7 +1253,7 @@
       "YC":3,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tina Ellertson",
       "team":"portland",
       "GP":3,
@@ -1272,7 +1272,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Danielle Foxhoven",
       "team":"portland",
       "GP":21,
@@ -1291,7 +1291,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Elizabeth Guess",
       "team":"portland",
       "GP":4,
@@ -1310,7 +1310,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tobin Heath",
       "team":"portland",
       "GP":7,
@@ -1329,7 +1329,7 @@
       "YC":4,
       "RC":0
    },
-   {  
+   {
       "NAME":"Angie Kerr",
       "team":"portland",
       "GP":15,
@@ -1348,7 +1348,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Allie Long",
       "team":"portland",
       "GP":22,
@@ -1367,7 +1367,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Nikki Marshall",
       "team":"portland",
       "GP":22,
@@ -1386,7 +1386,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Alex Morgan",
       "team":"portland",
       "GP":18,
@@ -1405,7 +1405,7 @@
       "YC":4,
       "RC":0
    },
-   {  
+   {
       "NAME":"Emilee O'Neil",
       "team":"portland",
       "GP":4,
@@ -1424,7 +1424,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Casey Ramirez",
       "team":"portland",
       "GP":4,
@@ -1443,7 +1443,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Meleana Shim",
       "team":"portland",
       "GP":19,
@@ -1462,7 +1462,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jessica Shufelt",
       "team":"portland",
       "GP":4,
@@ -1481,7 +1481,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Christine Sinclair",
       "team":"portland",
       "GP":20,
@@ -1500,7 +1500,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Nikki Washington",
       "team":"portland",
       "GP":11,
@@ -1519,7 +1519,7 @@
       "YC":3,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tiffany Weimer",
       "team":"portland",
       "GP":10,
@@ -1538,7 +1538,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Courtney Wetzel",
       "team":"portland",
       "GP":16,
@@ -1557,7 +1557,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kathryn Williamson",
       "team":"portland",
       "GP":22,
@@ -1576,7 +1576,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lauren Barnes",
       "team":"seattle",
       "GP":22,
@@ -1595,7 +1595,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Liz Bogus",
       "team":"seattle",
       "GP":20,
@@ -1614,7 +1614,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tiffany Cameron",
       "team":"seattle",
       "GP":7,
@@ -1633,7 +1633,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kennya Cordner",
       "team":"seattle",
       "GP":3,
@@ -1652,7 +1652,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Stephanie Cox",
       "team":"seattle",
       "GP":4,
@@ -1671,7 +1671,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Renae Cuellar",
       "team":"seattle",
       "GP":7,
@@ -1690,7 +1690,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kiersten Dallstream",
       "team":"seattle",
       "GP":20,
@@ -1709,7 +1709,7 @@
       "YC":1,
       "RC":1
    },
-   {  
+   {
       "NAME":"Kate Deines",
       "team":"seattle",
       "GP":17,
@@ -1728,7 +1728,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jessica Fishlock",
       "team":"seattle",
       "GP":21,
@@ -1747,7 +1747,7 @@
       "YC":4,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kaylyn Kyle",
       "team":"seattle",
       "GP":21,
@@ -1766,7 +1766,7 @@
       "YC":4,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kristina Larsen",
       "team":"seattle",
       "GP":9,
@@ -1785,7 +1785,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jessica McDonald",
       "team":"seattle",
       "GP":7,
@@ -1804,7 +1804,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kristen Meier",
       "team":"seattle",
       "GP":6,
@@ -1823,7 +1823,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Christine Nairn",
       "team":"seattle",
       "GP":22,
@@ -1842,7 +1842,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Teresa Noyola",
       "team":"seattle",
       "GP":11,
@@ -1861,7 +1861,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lyndsey Patterson",
       "team":"seattle",
       "GP":3,
@@ -1880,7 +1880,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Megan Rapinoe",
       "team":"seattle",
       "GP":12,
@@ -1899,7 +1899,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Elli Reed",
       "team":"seattle",
       "GP":17,
@@ -1918,7 +1918,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jenny Ruiz Williams",
       "team":"seattle",
       "GP":7,
@@ -1937,7 +1937,7 @@
       "YC":1,
       "RC":1
    },
-   {  
+   {
       "NAME":"Lindsay Taylor",
       "team":"seattle",
       "GP":6,
@@ -1956,7 +1956,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Emily Van Egmond",
       "team":"seattle",
       "GP":6,
@@ -1975,7 +1975,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Keelin Winters",
       "team":"seattle",
       "GP":21,
@@ -1994,7 +1994,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Emily Zurrer",
       "team":"seattle",
       "GP":7,
@@ -2013,7 +2013,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Danesha Adams",
       "team":"new jersey",
       "GP":20,
@@ -2032,7 +2032,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Brittany Bock",
       "team":"new jersey",
       "GP":7,
@@ -2051,7 +2051,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Melanie Booth",
       "team":"new jersey",
       "GP":3,
@@ -2070,7 +2070,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Rachel Breton",
       "team":"new jersey",
       "GP":1,
@@ -2089,7 +2089,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lisa De Vanna",
       "team":"new jersey",
       "GP":16,
@@ -2108,7 +2108,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Caitlin Foord",
       "team":"new jersey",
       "GP":15,
@@ -2127,7 +2127,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Katy Freels",
       "team":"new jersey",
       "GP":22,
@@ -2146,7 +2146,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Courtney Goodson",
       "team":"new jersey",
       "GP":22,
@@ -2165,7 +2165,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kendall Johnson",
       "team":"new jersey",
       "GP":22,
@@ -2184,7 +2184,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lindsi Lisonbee-Cutshall",
       "team":"new jersey",
       "GP":7,
@@ -2203,7 +2203,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Taylor Lytle",
       "team":"new jersey",
       "GP":21,
@@ -2222,7 +2222,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Manya Makoski",
       "team":"new jersey",
       "GP":20,
@@ -2241,7 +2241,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Ashley Nick",
       "team":"new jersey",
       "GP":3,
@@ -2260,7 +2260,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Monica Ocampo",
       "team":"new jersey",
       "GP":16,
@@ -2279,7 +2279,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kelley O'Hara",
       "team":"new jersey",
       "GP":12,
@@ -2298,7 +2298,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Christie Rampone",
       "team":"new jersey",
       "GP":20,
@@ -2317,7 +2317,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Nayeli Rangel",
       "team":"new jersey",
       "GP":10,
@@ -2336,7 +2336,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Sophie Schmidt",
       "team":"new jersey",
       "GP":19,
@@ -2355,7 +2355,7 @@
       "YC":0,
       "RC":1
    },
-   {  
+   {
       "NAME":"Maddie Thompson",
       "team":"new jersey",
       "GP":14,
@@ -2374,7 +2374,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Marisa Abegg",
       "team":"washington dc",
       "GP":5,
@@ -2393,7 +2393,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Candace Chapman",
       "team":"washington dc",
       "GP":8,
@@ -2412,7 +2412,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Robyn Gayle",
       "team":"washington dc",
       "GP":14,
@@ -2431,7 +2431,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Domenica Hodak",
       "team":"washington dc",
       "GP":11,
@@ -2450,7 +2450,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tori Huster",
       "team":"washington dc",
       "GP":21,
@@ -2469,7 +2469,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Holly King",
       "team":"washington dc",
       "GP":11,
@@ -2488,7 +2488,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Ali Krieger",
       "team":"washington dc",
       "GP":18,
@@ -2507,7 +2507,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lori Lindsey",
       "team":"washington dc",
       "GP":21,
@@ -2526,7 +2526,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Diana Matheson",
       "team":"washington dc",
       "GP":19,
@@ -2545,7 +2545,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Tiffany McCarty",
       "team":"washington dc",
       "GP":21,
@@ -2564,7 +2564,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Caroline Miller",
       "team":"washington dc",
       "GP":7,
@@ -2583,7 +2583,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Stephanie Ochs",
       "team":"washington dc",
       "GP":22,
@@ -2602,7 +2602,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Conny Pohlers",
       "team":"washington dc",
       "GP":13,
@@ -2621,7 +2621,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Toni Pressley",
       "team":"washington dc",
       "GP":8,
@@ -2640,7 +2640,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Julia Roberts",
       "team":"washington dc",
       "GP":20,
@@ -2659,7 +2659,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jasmyne Spencer",
       "team":"washington dc",
       "GP":17,
@@ -2678,7 +2678,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lindsay Taylor",
       "team":"washington dc",
       "GP":6,
@@ -2697,7 +2697,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kika Toulouse",
       "team":"washington dc",
       "GP":16,
@@ -2716,7 +2716,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Ingrid Wells",
       "team":"washington dc",
       "GP":8,
@@ -2735,7 +2735,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Colleen Williams",
       "team":"washington dc",
       "GP":6,
@@ -2754,7 +2754,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Lupita Worbis",
       "team":"washington dc",
       "GP":11,
@@ -2773,7 +2773,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Amy Barczuk",
       "team":"western ny",
       "GP":7,
@@ -2792,7 +2792,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Vicki DiMartino",
       "team":"western ny",
       "GP":12,
@@ -2811,7 +2811,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Ashley Grove",
       "team":"western ny",
       "GP":2,
@@ -2830,7 +2830,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Laura Heyboer",
       "team":"western ny",
       "GP":6,
@@ -2849,7 +2849,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Sarah Huffman",
       "team":"western ny",
       "GP":14,
@@ -2868,7 +2868,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Estelle Johnson",
       "team":"western ny",
       "GP":22,
@@ -2887,7 +2887,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Samantha Kerr",
       "team":"western ny",
       "GP":19,
@@ -2906,7 +2906,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Carli Lloyd",
       "team":"western ny",
       "GP":15,
@@ -2925,7 +2925,7 @@
       "YC":4,
       "RC":0
    },
-   {  
+   {
       "NAME":"Adriana Martin",
       "team":"western ny",
       "GP":15,
@@ -2944,7 +2944,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Bryanna McCarthy",
       "team":"western ny",
       "GP":1,
@@ -2963,7 +2963,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Veronica Perez",
       "team":"western ny",
       "GP":22,
@@ -2982,7 +2982,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Katherine Reynolds",
       "team":"western ny",
       "GP":22,
@@ -3001,7 +3001,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Jodi-Ann Robinson",
       "team":"western ny",
       "GP":13,
@@ -3020,7 +3020,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Alex Sahlen",
       "team":"western ny",
       "GP":18,
@@ -3039,7 +3039,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Angela Salem",
       "team":"western ny",
       "GP":21,
@@ -3058,7 +3058,7 @@
       "YC":1,
       "RC":0
    },
-   {  
+   {
       "NAME":"Brittany Taylor",
       "team":"western ny",
       "GP":21,
@@ -3077,7 +3077,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Abby Wambach",
       "team":"western ny",
       "GP":19,
@@ -3096,7 +3096,7 @@
       "YC":2,
       "RC":0
    },
-   {  
+   {
       "NAME":"Ingrid Wells",
       "team":"western ny",
       "GP":10,
@@ -3115,7 +3115,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"Kimberly Yokers",
       "team":"western ny",
       "GP":3,
@@ -3134,7 +3134,7 @@
       "YC":0,
       "RC":0
    },
-   {  
+   {
       "NAME":"McCall Zerboni",
       "team":"western ny",
       "GP":20,
@@ -3152,5 +3152,347 @@
       "FS":26,
       "YC":1,
       "RC":0
+   },
+   {
+      "NAME":"Alyssa Naeher",
+      "GP":9,
+      "GS":8,
+      "MP":765,
+      "W":4,
+      "L":2,
+      "T":2,
+      "SH":112,
+      "SOG":47,
+      "SV":36,
+      "GA":11,
+      "GAGM":1.222,
+      "PKM":0,
+      "PKF":1,
+      "SO":2,
+      "team": "boston"
+   },
+   {
+      "NAME":"Ashley Phillips",
+      "GP":11,
+      "GS":11,
+      "MP":945,
+      "W":2,
+      "L":5,
+      "T":4,
+      "SH":117,
+      "SOG":51,
+      "SV":32,
+      "GA":20,
+      "GAGM":1.818,
+      "PKM":1,
+      "PKF":1,
+      "SO":1,
+      "team": "boston"
+   },
+   {
+      "NAME":"Cecilia Santiago",
+      "GP":3,
+      "GS":3,
+      "MP":270,
+      "W":2,
+      "L":1,
+      "T":0,
+      "SH":32,
+      "SOG":14,
+      "SV":11,
+      "GA":3,
+      "GAGM":1,
+      "PKM":0,
+      "PKF":0,
+      "SO":1,
+      "team": "boston"
+   },
+   {
+      "NAME":"Erin McLeod",
+      "GP":16,
+      "GS":16,
+      "MP":1440,
+      "W":5,
+      "L":6,
+      "T":5,
+      "SH":165,
+      "SOG":92,
+      "SV":64,
+      "GA":28,
+      "GAGM":1.75,
+      "PKM":2,
+      "PKF":2,
+      "SO":4,
+      "team": "chicago"
+   },
+   {
+      "NAME":"Taylor Vancil",
+      "GP":6,
+      "GS":6,
+      "MP":540,
+      "W":3,
+      "L":2,
+      "T":1,
+      "SH":64,
+      "SOG":31,
+      "SV":23,
+      "GA":8,
+      "GAGM":1.333,
+      "PKM":2,
+      "PKF":2,
+      "SO":1,
+      "team": "chicago"
+   },
+   {
+      "NAME":"Nicole Barnhart",
+      "GP":20,
+      "GS":20,
+      "MP":1800,
+      "W":10,
+      "L":5,
+      "T":5,
+      "SH":187,
+      "SOG":86,
+      "SV":67,
+      "GA":19,
+      "GAGM":".95",
+      "PKM":3,
+      "PKF":3,
+      "SO":10,
+      "team": "kansas city"
+   },
+   {
+      "NAME":"Bianca Henninger",
+      "GP":2,
+      "GS":2,
+      "MP":180,
+      "W":1,
+      "L":1,
+      "T":0,
+      "SH":17,
+      "SOG":8,
+      "SV":5,
+      "GA":3,
+      "GAGM":1.5,
+      "PKM":1,
+      "PKF":1,
+      "SO":1,
+      "team": "kansas city"
+   },
+   {
+      "NAME":"Karina LeBlanc",
+      "GP":21,
+      "GS":21,
+      "MP":1890,
+      "W":11,
+      "L":5,
+      "T":5,
+      "SH":262,
+      "SOG":114,
+      "SV":92,
+      "GA":23,
+      "GAGM":1.095,
+      "PKM":2,
+      "PKF":4,
+      "SO":7,
+      "team": "portland"
+   },
+   {
+      "NAME":"Cris Lewis",
+      "GP":1,
+      "GS":1,
+      "MP":90,
+      "W":0,
+      "L":1,
+      "T":0,
+      "SH":10,
+      "SOG":2,
+      "SV":0,
+      "GA":2,
+      "GAGM":2,
+      "PKM":0,
+      "PKF":0,
+      "SO":0,
+      "team": "portland"
+   },
+   {
+      "NAME":"Michelle Betos",
+      "GP":7,
+      "GS":7,
+      "MP":630,
+      "W":0,
+      "L":6,
+      "T":1,
+      "SH":101,
+      "SOG":49,
+      "SV":34,
+      "GA":14,
+      "GAGM":2,
+      "PKM":0,
+      "PKF":0,
+      "SO":0,
+      "team": "seattle"
+   },
+   {
+      "NAME":"Haley Kopmeyer",
+      "GP":1,
+      "GS":1,
+      "MP":90,
+      "W":0,
+      "L":1,
+      "T":0,
+      "SH":14,
+      "SOG":9,
+      "SV":6,
+      "GA":3,
+      "GAGM":3,
+      "PKM":0,
+      "PKF":1,
+      "SO":0,
+      "team": "seattle"
+   },
+   {
+      "NAME":"Hope Solo",
+      "GP":14,
+      "GS":14,
+      "MP":1260,
+      "W":5,
+      "L":7,
+      "T":2,
+      "SH":198,
+      "SOG":101,
+      "SV":81,
+      "GA":19,
+      "GAGM":1.357,
+      "PKM":5,
+      "PKF":6,
+      "SO":0,
+      "team": "seattle"
+   },
+   {
+      "NAME":"Ashley Baker",
+      "GP":1,
+      "GS":0,
+      "MP":1,
+      "W":0,
+      "L":0,
+      "T":0,
+      "SH":2,
+      "SOG":1,
+      "SV":1,
+      "GA":0,
+      "GAGM":null,
+      "PKM":0,
+      "PKF":0,
+      "SO":0,
+      "team": "new jersey"
+   },
+   {
+      "NAME":"Brittany Cameron",
+      "GP":18,
+      "GS":18,
+      "MP":1619,
+      "W":9,
+      "L":4,
+      "T":5,
+      "SH":192,
+      "SOG":83,
+      "SV":65,
+      "GA":17,
+      "GAGM":".944",
+      "PKM":0,
+      "PKF":1,
+      "SO":8,
+      "team": "new jersey"
+   },
+   {
+      "NAME":"Jillian Loyden",
+      "GP":4,
+      "GS":4,
+      "MP":360,
+      "W":1,
+      "L":2,
+      "T":1,
+      "SH":60,
+      "SOG":30,
+      "SV":21,
+      "GA":9,
+      "GAGM":2.25,
+      "PKM":0,
+      "PKF":0,
+      "SO":1,
+      "team": "new jersey"
+   },
+   {
+      "NAME":"Ashlyn Harris",
+      "GP":18,
+      "GS":18,
+      "MP":1620,
+      "W":2,
+      "L":11,
+      "T":5,
+      "SH":259,
+      "SOG":118,
+      "SV":85,
+      "GA":33,
+      "GAGM":1.833,
+      "PKM":2,
+      "PKF":3,
+      "SO":1,
+      "team": "washington dc"
+   },
+   {
+      "NAME":"Chantel Jones",
+      "GP":4,
+      "GS":4,
+      "MP":360,
+      "W":1,
+      "L":3,
+      "T":0,
+      "SH":55,
+      "SOG":21,
+      "SV":15,
+      "GA":6,
+      "GAGM":1.5,
+      "PKM":0,
+      "PKF":1,
+      "SO":1,
+      "team": "washington dc"
+   },
+   {
+      "NAME":"Adrianna Franch",
+      "GP":22,
+      "GS":22,
+      "MP":1978,
+      "W":10,
+      "L":4,
+      "T":8,
+      "SH":246,
+      "SOG":119,
+      "SV":98,
+      "GA":20,
+      "GAGM":".909",
+      "PKM":1,
+      "PKF":1,
+      "SO":7,
+      "team": "western ny"
+   },
+   {
+      "NAME":"Pamela Tajonar",
+      "GP":1,
+      "GS":0,
+      "MP":2,
+      "W":0,
+      "L":0,
+      "T":0,
+      "SH":3,
+      "SOG":0,
+      "SV":0,
+      "GA":0,
+      "GAGM":null,
+      "PKM":0,
+      "PKF":0,
+      "SO":0,
+      "team": "western ny"
    }
 ]
