@@ -1,5 +1,5 @@
 nwslData
-.controller('GraphsCtrl', function($scope, $timeout, getDataService, nwslDataService, graphDataService) {
+.controller('Graphs2014Ctrl', function($scope, $timeout, getDataService, nwslDataService, graphDataService) {
   'use strict';
 
   $scope.goalScorers = [];
