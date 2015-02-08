@@ -2,7 +2,15 @@ nwslData
 .controller('Graphs2013Ctrl', function($scope, $timeout, getDataService, nwslDataService, graphDataService) {
   'use strict';
 
+  $scope.rawData = [];
   $scope.goalScorers = [];
+  $scope.cities = [];
+  $scope.goalsPerHr = [];
+  $scope.goalsAllowedPerGame = [];
+  $scope.saves = [];
+  $scope.goalsAllowed = [];
+  $scope.totalFouls = [];
+  $scope.yellowCards = [];
   $scope.loading = true;
 
   $scope.graphData = graphDataService.data;
@@ -18,7 +26,6 @@ nwslData
     $scope.totalFouls = newVal.totalFouls;
     $scope.yellowCards = newVal.yellowCards;
     $scope.loading = newVal.loading;
-    console.log(newVal);
   }, true);
 
   graphDataService.fetchData('2013');
