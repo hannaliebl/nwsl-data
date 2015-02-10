@@ -204,7 +204,7 @@ nwslData
         sortOrder = !sortOrder;
         if (!sortOrder) {
           scope.sortText = "Sort by Teams";
-          var x0 = x.domain(data.sort(function(a, b) {
+          var x0 = x.domain(scope.data.sort(function(a, b) {
             if (a[attrs.scaley] === b[attrs.scaley]) {
             if (a.team > b.team) return 1;
             if (a.team < b.team) return -1;
@@ -236,7 +236,7 @@ nwslData
             .delay(delay);
         } else {
           scope.sortText = orig;
-          var x1 = x.domain(data.sort(function(a, b) {
+          var x1 = x.domain(scope.data.sort(function(a, b) {
             if (a.team === b.team) {
               if (a[attrs.scaley] > b[attrs.scaley]) return -1;
               if (a[attrs.scaley] < b[attrs.scaley]) return 1;
