@@ -1,5 +1,5 @@
 nwslData
-.directive('bargraph', function (nwslDataService, barGraphAppearance) {
+.directive('bargraph', function (barGraphAppearance) {
   'use strict';
   return {
     restrict: "AE",
@@ -16,7 +16,7 @@ nwslData
       team: "&",
       sort: '&',
     },
-    templateUrl: '/js/directives/templates/bargraphtemplate.html',
+    templateUrl: '/js/directives/templates/bar-graph-template.html',
     controller: function ($scope) {
       $scope.show = false;
       $scope.showDetail = function (item) {

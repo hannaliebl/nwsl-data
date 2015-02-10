@@ -1,5 +1,5 @@
 nwslData
-.controller('Graphs2013Ctrl', function ($scope, getDataService, nwslDataService, graphDataService) {
+.controller('Graphs2013Ctrl', function ($scope, getDataService, graphDataService) {
   'use strict';
 
   $scope.rawData2013 = [];

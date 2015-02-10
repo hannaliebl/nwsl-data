@@ -1,5 +1,5 @@
 nwslData
-.directive('stackedBargraph', function (nwslDataService, barGraphAppearance) {
+.directive('stackedBargraph', function (barGraphAppearance) {
   'use strict';
   return {
     restrict: "AE",
@@ -15,7 +15,7 @@ nwslData
       team: "&",
       sort: "&"
     },
-    templateUrl: '/js/directives/templates/stackedbargraphtemplate.html',
+    templateUrl: '/js/directives/templates/stacked-bar-graph-template.html',
     controller: function ($scope) {
       $scope.show = false;
       $scope.showDetail = function (item) {

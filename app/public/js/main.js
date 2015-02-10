@@ -3,7 +3,7 @@ var nwslData = angular.module("nwslData", ["ngRoute", "ngAnimate"])
     "use strict";
     $routeProvider
       .when("/", {
-        templateUrl: "./partials/graphs.html",
+        templateUrl: "./partials/graphs-2014.html",
         controller:"Graphs2014Ctrl"
       })
       .when("/2013", {
