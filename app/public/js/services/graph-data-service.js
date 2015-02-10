@@ -27,11 +27,12 @@ nwslData
   };
 
   var getOffFrameShots = function(data) {
-    for (var i = 0; i < data.length; i++) {
-      var offFrameShots = data[i].SH - data[i].SOG;
-      data[i].offFrameShots = offFrameShots;
+    var onlyGoalScorers = getRidOfNonGoalScorers(data);
+    for (var i = 0; i < onlyGoalScorers.length; i++) {
+      var offFrameShots = onlyGoalScorers[i].SH - onlyGoalScorers[i].SOG;
+      onlyGoalScorers[i].offFrameShots = offFrameShots;
     }
-    return generalSort(data, "SH");
+    return generalSort(onlyGoalScorers, "SH");
   };
 
   var getTeams = function(data) {
