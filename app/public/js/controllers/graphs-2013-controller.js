@@ -20,7 +20,7 @@ nwslData
     $scope.rawData2013 = newVal.rawData;
     $scope.goalScorers2013 = newVal.goalScorers;
     $scope.offFrameShots2013 = newVal.offFrameShots;
-    $scope.cities2013 = newVal.teams;
+    $scope.cities = newVal.teams;
     $scope.goalsPerHr2013 = newVal.goalsPerHr;
     $scope.goalsAllowedPerGame2013 = newVal.goalsAllowedPerGame;
     $scope.saves2013 = newVal.saves;

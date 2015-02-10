@@ -117,7 +117,7 @@ nwslData
         players.exit()
             .transition()
             .duration(500)
-            .style("opacity", 0)
+            .style("opacity", 1)
             .remove();
 
         var bars = players.selectAll("rect")
@@ -145,7 +145,7 @@ nwslData
           .attr("x", 0)
           .attr("y", y(0))
           .attr("height", 0)
-          .style("opacity", 0)
+          .style("opacity", 1)
           .on('mouseover', function(d,i) {
             scope.$apply(scope.showDetail({item: d}));
           })
@@ -170,7 +170,7 @@ nwslData
           bars.exit()
             .transition()
             .duration(500)
-            .style("opacity", 0)
+            .style("opacity", 1)
             .remove();
       }
 
