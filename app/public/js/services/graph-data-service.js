@@ -26,6 +26,14 @@ nwslData
     return generalSort(goalScorers, "G");
   };
 
+  var getOffFrameShots = function(data) {
+    for (var i = 0; i < data.length; i++) {
+      var offFrameShots = data[i].SH - data[i].SOG;
+      data[i].offFrameShots = offFrameShots;
+    }
+    return generalSort(data, "SH");
+  };
+
   var getTeams = function(data) {
     var allTeams = [];
     for (var i = 0; i < data.length; i++) {
@@ -104,6 +112,7 @@ nwslData
   var data = {
     rawData: [],
     goalScorers: [],
+    offFrameShots: [],
     teams: [],
     goalsPerHr: [],
     goalsAllowedPerGame: [],
@@ -121,7 +130,8 @@ nwslData
       getDataService.getRawData(year).then(function(response) {
         JSON.stringify(response);
         data.rawData = response;
-        data.goalScorers = getRidOfNonGoalScorers(data.rawData);
+        data.goalScorers = getRidOfNonGoalScorers(response);
+        data.offFrameShots = getOffFrameShots(response);
         data.teams = getTeams(response);
         data.goalsPerHr = getGoalsPerHr(response);
         data.goalsAllowedPerGame = getGoalsAllowedPerGame(response);

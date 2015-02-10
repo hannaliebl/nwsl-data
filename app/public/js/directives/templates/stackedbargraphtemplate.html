@@ -1,26 +1,31 @@
-<h2>{{title}}</h2>
-<div class="team-filter">
-  <span>
-    <label ng-class="{ 'active' : teamFilter === 'all'}">
-      <input ng-model="teamFilter" ng-checked="true" ng-init="teamFilter='all'" value="all" type="radio" name="team-filter" ng-click="team('all')" />
-      ALL TEAMS
-    </label>
-  </span>
-  <button ng-click="sort()" ng-if="teamFilter === 'all' || teamFilter === undefined">{{sortText}}</button>
+<div ng-show="loading">
+  <h1>LOADING</h1>
 </div>
-<div ng-model="showteams">
-  <div ng-if="showteams == 'true'" class="team-filter">
-    <span ng-repeat="city in $parent.$parent.cities">
-      <label ng-class="{ 'active' : $parent.$parent.teamFilter === city }">
-        <input type="radio" ng-model="$parent.$parent.teamFilter" value="{{city}}" name="team-filter" ng-click="team(city)" />
-        {{city | uppercase}}
+<div ng-hide="loading">
+  <h2>{{title}}</h2>
+  <div class="team-filter">
+    <span>
+      <label ng-class="{ 'active' : teamFilter === 'all'}">
+        <input ng-model="teamFilter" ng-checked="true" ng-init="teamFilter='all'" value="all" type="radio" name="team-filter" ng-click="team('all')" />
+        ALL TEAMS
       </label>
     </span>
+    <button ng-click="sort()" ng-if="teamFilter === 'all' || teamFilter === undefined">{{sortText}}</button>
   </div>
-</div>
-<div id="{{svgId}}" style="background: url('img/{{cityName.img}}') 50% 20% no-repeat;">
-  <div class="hover-label" ng-class="{ 'active' : show }">
-    <h1>{{$parent.details.player}}</h1>
-    <span>{{hoverText}} {{$parent.details.totalShots}}, {{hoverText2}} {{$parent.details.shotsOnGoal}}, </span><span>Team: {{$parent.details.team | uppercase}}</span>
+  <div ng-model="showteams">
+    <div ng-if="showteams == 'true'" class="team-filter">
+      <span ng-repeat="city in $parent.$parent.cities">
+        <label ng-class="{ 'active' : $parent.$parent.teamFilter === city }">
+          <input type="radio" ng-model="$parent.$parent.teamFilter" value="{{city}}" name="team-filter" ng-click="team(city)" />
+          {{city | uppercase}}
+        </label>
+      </span>
+    </div>
+  </div>
+  <div id="{{svgId}}" class="stacked-bargraph-svg-container" style="background: url('img/{{cityName.img}}') 50% 20% no-repeat;">
+    <div class="hover-label" ng-class="{ 'active' : show }">
+      <h1>{{details.item.player}}</h1>
+      <span>{{hoverText}} {{details.item.totalShots}}, {{hoverText2}} {{details.item.shotsOnGoal}}, </span><span>Team: {{details.item.team | uppercase}}</span>
+    </div>
   </div>
 </div>
