@@ -5,42 +5,40 @@
    <section class="graph-group">
     <h1 class="group-label">Goalscorers</h1>
     <div class="graph-container">
-      <bargraph data="goalScorers" loading="loading" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" showteams="true" sort-text="Sort by Goals">
+      <bargraph data="goalScorers2013" loading="loading" scalex="NAME" scaley="G" svg-id="goalscorers" labelx="Player" labely="Goals Scored" title="Total Goals" hover-text="Goals:" city-name="all" showteams="true" sort-text="Sort by Goals">
       </bargraph>
     </div>
     <div class="graph-container">
-      <bargraph data="goalsPerHr" loading="loading" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals Per Hour:" city-name="all" showteams="true" sort-text="Sort by Goals Per Hour">
+      <bargraph data="goalsPerHr2013" loading="loading" scalex="NAME" scaley="goalsPerHr" svg-id="goalproductivity" labelx="Player" labely="Goals Scored per Hour Played" title="Goal Productivity" hover-text="Goals Per Hour:" city-name="all" showteams="true" sort-text="Sort by Goals Per Hour">
       </bargraph>
     </div>
-<!--     <div ng-controller="GraphsCtrl">
-      <div class="graph-container">
-        <stacked-bargraph source="offFrameShots" title="Total Shots and Shots on Goal" year="2014" scalex="NAME" scaley="SH" svg-id="shots-stacked" hover-text="Total Shots:" hover-text2="Shots on Goal:" labely="Shots" city-name="all" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Total Shots"></stacked-bargraph>
-      </div>
-    </div> -->
+    <div class="graph-container">
+      <stacked-bargraph data="offFrameShots2013" loading="loading" title="Total Shots and Shots on Goal" year="2014" scalex="NAME" scaley="SH" svg-id="shots-stacked" hover-text="Total Shots:" hover-text2="Shots on Goal:" labely="Shots" city-name="all" show="show" hover="showDetail(item)" hover-leave="hideDetail(item)" sort="sort()" showteams="true" sort-text="Sort by Total Shots"></stacked-bargraph>
+    </div>
   </section>
   <section class="graph-group">
     <h1 class="group-label">Goalkeepers</h1>
     <div class="graph-container">
-      <bargraph data="goalsAllowedPerGame" loading="loading" scalex="NAME" scaley="GAGM" svg-id="goalsallowedpergame" labelx="Player" labely="Goals Allowed per Game" title="Goals Allowed per Game" hover-text="Goals Allowed per Game:" city-name="all" showteams="false" sort-text="Sort by Goals Allowed per Game">
+      <bargraph data="goalsAllowedPerGame2013" loading="loading" scalex="NAME" scaley="GAGM" svg-id="goalsallowedpergame" labelx="Player" labely="Goals Allowed per Game" title="Goals Allowed per Game" hover-text="Goals Allowed per Game:" city-name="all" showteams="false" sort-text="Sort by Goals Allowed per Game">
       </bargraph>
     </div>
     <div class="graph-container">
-      <bargraph data="saves" loading="loading" scalex="NAME" scaley="SV" svg-id="saves" labelx="Player" labely="Total Saves" title="Total Saves" hover-text="Total Saves:" city-name="all" showteams="false" sort-text="Sort by Total Saves">
+      <bargraph data="saves2013" loading="loading" scalex="NAME" scaley="SV" svg-id="saves" labelx="Player" labely="Total Saves" title="Total Saves" hover-text="Total Saves:" city-name="all" showteams="false" sort-text="Sort by Total Saves">
       </bargraph>
     </div>
     <div class="graph-container">
-      <bargraph data="goalsAllowed" loading="loading" scalex="NAME" scaley="GA" svg-id="goalsallowed" labelx="Player" labely="Total Goals Allowed" title="Total Goals Allowed" hover-text="Total Goals Allowed:" city-name="all" showteams="false" sort-text="Sort by Total Goals Allowed">
+      <bargraph data="goalsAllowed2013" loading="loading" scalex="NAME" scaley="GA" svg-id="goalsallowed" labelx="Player" labely="Total Goals Allowed" title="Total Goals Allowed" hover-text="Total Goals Allowed:" city-name="all" showteams="false" sort-text="Sort by Total Goals Allowed">
       </bargraph>
     </div>
   </section>
   <section class="graph-group">
     <h1 class="group-label">Fouls/Cards</h1>
     <div class="graph-container">
-      <bargraph data="totalFouls" loading="loading" scalex="NAME" scaley="FC" svg-id="foulscommitted" labelx="Player" labely="Total Fouls Committed" title="Total Fouls Committed" hover-text="Total Fouls Committed:" city-name="all" showteams="true" sort-text="Sort by Total Fouls Committed">
+      <bargraph data="totalFouls2013" loading="loading" scalex="NAME" scaley="FC" svg-id="foulscommitted" labelx="Player" labely="Total Fouls Committed" title="Total Fouls Committed" hover-text="Total Fouls Committed:" city-name="all" showteams="true" sort-text="Sort by Total Fouls Committed">
       </bargraph>
     </div>
     <div class="graph-container">
-      <bargraph data="yellowCards" loading="loading" scalex="NAME" scaley="YC" svg-id="yellowcards" labelx="Player" labely="Total Yellow Cards" title="Total Yellow Cards" hover-text="Total Yellow Cards:" city-name="all" showteams="true" sort-text="Sort by Total Yellow Cards">
+      <bargraph data="yellowCards2013" loading="loading" scalex="NAME" scaley="YC" svg-id="yellowcards" labelx="Player" labely="Total Yellow Cards" title="Total Yellow Cards" hover-text="Total Yellow Cards:" city-name="all" showteams="true" sort-text="Sort by Total Yellow Cards">
       </bargraph>
     </div>
     <div class="graph-container">
