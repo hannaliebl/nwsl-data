@@ -174,7 +174,7 @@ nwslData
             .remove();
       }
 
-      update(scope.data);
+      // update(scope.data);
 
       scope.cityName = barGraphAppearance().teamBackgrounds.all;
       scope.team = function(team) {
