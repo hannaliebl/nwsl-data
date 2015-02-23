@@ -1,5 +1,5 @@
 nwslData
-.factory('graphDataService', function (getDataService) {
+.factory('graphDataService', function (getDataService, barGraphAppearance) {
   'use strict';
 
   var generalSort = function(data, measure) {
@@ -110,6 +110,14 @@ nwslData
     return generalSort(yellowCards, "YC");
   };
 
+  var appendColorScale = function(teamArray) {
+    var teamArrayWithColor = teamArray.slice(0);
+    teamArray.forEach(function(item, index) {
+      item.color = barGraphAppearance().teamColors[item.team].fill;
+    });
+    return teamArrayWithColor;
+  };
+
   var data = {
     rawData: [],
     goalScorers: [],
@@ -124,11 +132,18 @@ nwslData
     loading: true
   };
 
+  var teamData = {
+    loading: true,
+    rawData: [],
+    data: []
+  };
+
   return {
     data: data,
-    fetchData: function(year) {
+    teamData : teamData,
+    fetchPlayerData: function(year) {
       data.loading = true;
-      getDataService.getRawData(year).then(function(response) {
+      getDataService.getRawPlayerData(year).then(function(response) {
         JSON.stringify(response);
         data.rawData = response;
         data.goalScorers = getRidOfNonGoalScorers(response);
@@ -142,6 +157,15 @@ nwslData
         data.yellowCards = getYellowCards(response);
         data.loading = false;
       });
-    }
+    },
+  fetchTeamData: function(year) {
+    teamData.loading = true;
+    getDataService.getRawTeamData(year).then(function(response) {
+      JSON.stringify(response);
+      var rawData = appendColorScale(response);
+      teamData.data = rawData;
+      teamData.loading = false;
+    });
+  }
   };
 });

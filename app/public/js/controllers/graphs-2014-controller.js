@@ -15,6 +15,7 @@ nwslData
   $scope.loading2014 = true;
 
   $scope.graphData = graphDataService.data;
+  $scope.teamGraphData = graphDataService.teamData;
 
   $scope.$watch('graphData', function(newVal) {
     $scope.loading2014 = newVal.loading;
@@ -30,5 +31,11 @@ nwslData
     $scope.yellowCards2014 = newVal.yellowCards;
   }, true);
 
-  graphDataService.fetchData('2014');
+  $scope.$watch('teamGraphData', function(newVal) {
+    $scope.teamLoading2014 = newVal.loading;
+    $scope.rawTeamData2014 = newVal.data;
+  }, true);
+
+  graphDataService.fetchPlayerData('2014');
+  graphDataService.fetchTeamData('2014');
 });

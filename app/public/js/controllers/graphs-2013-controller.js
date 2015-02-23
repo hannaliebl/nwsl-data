@@ -30,5 +30,5 @@ nwslData
     $scope.loading = newVal.loading;
   }, true);
 
-  graphDataService.fetchData('2013');
+  graphDataService.fetchPlayerData('2013');
 });
