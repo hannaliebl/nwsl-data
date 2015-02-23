@@ -15,15 +15,15 @@ server.get('/', function (req, res) {
   res.render('./public/index.html');
 });
 
-server.get('/api/:year', function (req, res) {
-  if (req.params.year === "2014") {
-    fs.readFile(__dirname +'/data/2014.json', 'utf8', function (err, data) {
+server.get('/api/:type/:year', function (req, res) {
+  if (req.params.type === "player") {
+    fs.readFile(__dirname + '/data/player/' + req.params.year + '.json', 'utf8', function (err, data) {
       if (err) throw err;
       data = JSON.parse(data);
       res.json(data);
     });
-  } else if (req.params.year === "2013") {
-    fs.readFile(__dirname +'/data/2013.json', 'utf8', function (err, data) {
+  } else if (req.params.type === "team") {
+    fs.readFile(__dirname + '/data/team/' + req.params.year + '.json', 'utf8', function (err, data) {
       if (err) throw err;
       data = JSON.parse(data);
       res.json(data);

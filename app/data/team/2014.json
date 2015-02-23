@@ -1,0 +1,34 @@
+[
+  {
+    "team": "boston",
+    "goals": 37,
+    "goalsHeaded": 3,
+    "goalsKicked": 33,
+    "ownGoals": 1,
+    "assists": 21,
+    "shots": 250,
+    "shotsOnGoal": 123,
+    "saves": 113,
+    "fouls": 204,
+    "offsides": 60,
+    "cornerKicks": 88,
+    "yellowCards": 24,
+    "redCards": 3
+  },
+  {
+    "team": "chicago",
+    "goals": 32,
+    "goalsHeaded": 6,
+    "goalsKicked": 26,
+    "ownGoals": 0,
+    "assists": 19,
+    "shots": 254,
+    "shotsOnGoal": 131,
+    "saves": 94,
+    "fouls": 252,
+    "offsides": 75,
+    "cornerKicks": 119,
+    "yellowCards": 33,
+    "redCards": 1
+  }
+]
