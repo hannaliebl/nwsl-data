@@ -1,14 +1,14 @@
 <div ng-show="loading" style="text-align:center;width:100%;">
   <h1>LOADING</h1>
 </div>
-<div ng-hide="loading">
+<div ng-hide="loading" class="doughnut-outer-container">
  <div class="doughnut-container">
     <h3 class="text-center">
       {{title}}
     </h3>
   </div>
-  <ul class="list-unstyled text-center chartjs-legend {{containerClass}}">
-    <li ng-repeat="legendKey in data | orderBy:legendSort(legendKey)" class="legend-text" ng-class="{'highlight': activeClass.label == legendKey.team}" ng-mouseenter="legendHover(legendKey)" ng-mouseleave="legendHoverOff(legendKey)">
+  <ul class="list-unstyled text-center doughnut-legend {{containerClass}}">
+    <li ng-repeat="legendKey in data | orderBy:legendSort(legendKey)" class="legend-text" ng-class="{'highlight': activeClass.team == legendKey.team}" ng-mouseover="legendHover(legendKey)" ng-mouseleave="legendHoverOff(legendKey)">
       <div class="legend-content clearfix">
         <div class="legend-left">
           <span ng-attr-style="background-color:{{legendKey.color}};" class="legend-key"></span>

@@ -2,8 +2,56 @@
   padding: 30px 0 0 0;
 }
 
-.doughnut-container {
-  width: 256px;
+.row {
+  width: 100%;
+}
+
+.doughnut-outer-container {
+  float: left;
+  width: 315px;
+}
+
+ul.doughnut-legend {
+    border: 1px solid whitesmoke;
+    padding: 3px;
+    margin: 10px auto;
+}
+
+.legend-content {
+    vertical-align: middle;
+    padding: 3px 5px;
+}
+
+.legend-container {
+    max-width: 500px;
+    min-height: 70px;
+}
+
+.legend-key {
+    float: left;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    border-radius: 50%;
+}
+
+li.legend-text {
+    color: darken(#e3e3e2, 40%);
+    position: relative;
+    cursor: pointer;
+    &.highlight {
+      background: yellow;
+    }
+}
+
+.legend-left {
+    position: absolute;
+    left: 4px;
+}
+
+.legend-right {
+    float:right;
 }
 
 .graph-container {

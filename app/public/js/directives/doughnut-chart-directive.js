@@ -19,10 +19,12 @@ nwslData
       $scope.showDetail = function (item) {
         $scope.show = true;
         $scope.details = item;
+        $scope.activeClass = item.item.data;
       };
       $scope.hideDetail = function (item) {
         $scope.show = false;
         $scope.details = null;
+        $scope.activeClass = null
       };
     },
     link: function (scope, element, attrs) {
@@ -79,7 +81,7 @@ nwslData
 
       scope.legendHover = function(d) {
         scope.activeClass = d;
-        appendCenterLegend(element, d.percentageOfTotal);
+        appendCenterLegend(element, d.team);
       };
 
       scope.legendHoverOff = function(d) {
@@ -88,7 +90,6 @@ nwslData
       };
 
       function update(data) {
-        console.log('d chart data', data);
         var arcs = arcGroup.selectAll('path')
           .data(pie(data), function(d) { return d.data[scope.measure]; });
         arcs.enter().append('svg:path')
