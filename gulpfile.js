@@ -57,7 +57,7 @@ gulp.task('lint', function() {
   .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('build', ['bower-files', 'copy-css', 'copy-server', 'copy-html-files'], function() {
+gulp.task('build', ['bower-files', 'copy-css', 'copy-server', 'copy-data', 'copy-img', 'copy-html-files'], function() {
     return gulp.src(['./app/public/js/**/*.js', '!./app/public/bower_components/**'])
     .pipe(ngAnnotate())
     .pipe(uglify())
@@ -89,6 +89,16 @@ gulp.task('copy-html-files', ['empty-dist'], function () {
 gulp.task('copy-server', ['empty-dist'], function () {
   return gulp.src('./app/server.js')
   .pipe(gulp.dest('dist/'));
+})
+
+gulp.task('copy-data', ['empty-dist'], function () {
+  return gulp.src('./app/data/**/*.json')
+  .pipe(gulp.dest('dist/data/'));
+})
+
+gulp.task('copy-img', ['empty-dist'], function () {
+  return gulp.src('./app/public/img/**')
+  .pipe(gulp.dest('dist/public/img/'));
 })
 
 gulp.task("bower-files", ['empty-dist'], function(){
