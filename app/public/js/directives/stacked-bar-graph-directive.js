@@ -116,8 +116,9 @@ nwslData
 
         players.exit()
             .transition()
-            .duration(500)
-            .style("opacity", 1)
+            .duration(200)
+            .attr("x", 0)
+            .style("opacity", 0.1)
             .remove();
 
         var bars = players.selectAll("rect")

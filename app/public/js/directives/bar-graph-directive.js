@@ -142,7 +142,8 @@ nwslData
           bars.exit()
             .transition()
             .duration(200)
-            .style("opacity", 1)
+            .attr("x", 0)
+            .style("opacity", 0.1)
             .remove();
       }
 
