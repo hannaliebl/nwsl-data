@@ -22,7 +22,7 @@
       </span>
     </div>
   </div>
-  <div id="{{svgId}}" class="stacked-bargraph-svg-container" style="background: url('img/{{cityName.img}}') 50% 20% no-repeat;">
+  <div id="{{svgId}}" class="stacked-bargraph-svg-container" ng-style="{ 'background': 'url(img/' + cityName.img + ') 50% 20% no-repeat' }">
     <div class="hover-label" ng-class="{ 'active' : show }">
       <h1>{{details.item.player}}</h1>
       <span>{{hoverText}} {{details.item.totalShots}}, {{hoverText2}} {{details.item.shotsOnGoal}}, </span><span>Team: {{details.item.team | uppercase}}</span>
